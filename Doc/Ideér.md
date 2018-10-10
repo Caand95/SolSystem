@@ -11,8 +11,8 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 | HTML, CSS, JS           | PHP Til DB forbindelse            |
 | Xampp                   | JS, JQuery til animations styring |
 | Målgruppe( Børn )       | Bootstrap til CSS                 |
-| Mysql                   |                                   |
-| Navigation over 3 sider |                                   |
+| Mysql                   | Repository Patterns               |
+| Navigation over 3 sider | MVC                               |
 | Dagslog                 |                                   |
 
 ## Views og deres teoretiske functionaliteter
@@ -50,7 +50,11 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ### View 3 - Wikipedia
 
-## Planeter info
+## Planeter info til Database
 
 ![](.\billeder\info af planeter.png)
+
+## Classes
+
+View klasser har Dependency injection af Planets
 
