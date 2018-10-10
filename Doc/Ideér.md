@@ -4,7 +4,7 @@
 
 Vi har snakket om at have disse elementer ind over vores projekt.
 
-![](.\43476120_247507859281397_2510296328815247360_n.jpg)
+![](.\billeder\43476120_247507859281397_2510296328815247360_n.jpg)
 
 | Krav                    | Miljø / Produkt                   |
 | ----------------------- | --------------------------------- |
@@ -38,7 +38,7 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ## Resten af Sitets functionalitet.
 
-![](C:\xampp\htdocs\SolSystem\Doc\Overview.png)
+![](.\billeder\Overview.png)
 
 ### View 1 - Solsystem Oversigt
 
@@ -52,5 +52,5 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ## Planeter info
 
-![](C:\xampp\htdocs\SolSystem\Doc\info af planeter.png)
+![](.\billeder\info af planeter.png)
 
