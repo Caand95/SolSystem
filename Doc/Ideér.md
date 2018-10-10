@@ -4,16 +4,16 @@
 
 Vi har snakket om at have disse elementer ind over vores projekt.
 
-![](C:\Users\casp7654\Desktop\Ideér\43476120_247507859281397_2510296328815247360_n.jpg)
+![](.\43476120_247507859281397_2510296328815247360_n.jpg)
 
-| Krav                    |  Miljø / Produkt                   |
-| ----------------------- |  --------------------------------- |
-| Javascript              |  PHP Til DB forbindelse            |
-| Xampp                   |  JS, JQuery til animations styring |
-| Målgruppe( Børn )       |  Bootstrap til CSS                 |
-| Mysql                   |                                    |
-| Navigation over 3 sider |                                    |
-| Dagslog                 |                                    |
+| Krav                    | Miljø / Produkt                   |
+| ----------------------- | --------------------------------- |
+| HTML, CSS, JS           | PHP Til DB forbindelse            |
+| Xampp                   | JS, JQuery til animations styring |
+| Målgruppe( Børn )       | Bootstrap til CSS                 |
+| Mysql                   |                                   |
+| Navigation over 3 sider |                                   |
+| Dagslog                 |                                   |
 
 ## Views og deres teoretiske functionaliteter
 
@@ -37,4 +37,20 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 > Tekstbaseret oversigt med information omkring abstracte elementer, hvor der skal være billede i højre samt en informationsbox og en menu i højre efter elementer alfabetisk
 
 ## Resten af Sitets functionalitet.
+
+![](C:\xampp\htdocs\SolSystem\Doc\Overview.png)
+
+### View 1 - Solsystem Oversigt
+
+
+
+### View 2 - Solsystem Info
+
+
+
+### View 3 - Wikipedia
+
+## Planeter info
+
+![](C:\xampp\htdocs\SolSystem\Doc\info af planeter.png)
 
