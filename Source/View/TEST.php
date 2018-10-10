@@ -3,30 +3,35 @@ function GetInfo(){
     return array(
             "Sol" => array(
                 "name" => "Sol",
-                "x" => "1",
-                "y" => "1",
-                "size" => "50",
-                "speed" => "0",
-                "hasRings" => "0",
+                "size" => 50,
+                "speed" => 0,
+                "position" => 0,
+                "hasRings" => "false",
                 "color" => "orange"
               ),
             "Earth" => array(
                 "name" => "Earth",
-                "x" => "-50",
-                "y" => "-30",
-                "size" => "20",
-                "speed" => "40",
-                "hasRings" => "true",
+                "size" => 20,
+                "speed" => 40,
+                "position" => 2,
+                "hasRings" => "false",
                 "color" => "blue"
             ),
             "Mars" => array(
                 "name" => "Mars",
-                "x" => "20",
-                "y" => "20",
-                "size" => "10",
-                "speed" => "50",
+                "size" => 10,
+                "speed" => 50,
+                "position" => 5,
                 "hasRings" => "false",
                 "color" => "red"
+            ),
+            "Pluto" => array(
+                "name" => "Pluto",
+                "size" => 30,
+                "speed" => 4,
+                "position" => 1,
+                "hasRings" => "false",
+                "color" => "darkgrey"
             )
         );
 }
@@ -57,24 +62,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
       echo    "Width:".($Element->size).";\n";
       echo    "background-color:".$Element->color.";\n";
 
-      if($Element->name != "Sol"){
-          if($Element->y < 0){
-              echo    "Bottom:-".( ($list->Elements->Sol->size/2) + (-1*($Element->y)) + ($Element->size/2) ).";\n";
-          }
-          else
-          {
-              echo    "Bottom:".( ($list->Elements->Sol->size/2) + ($Element->y) + ($Element->size/2) ).";\n";
-          }
-            if($Element->x < 0){
-                echo    "Left:-".( ($list->Elements->Sol->size/2) + (-1*($Element->x)) + ($Element->size/2) ).";\n";
-          }
-          else
-          {
-              echo    "Left:".( ($list->Elements->Sol->size/2) + ($Element->x) + ($Element->size/2) ).";\n";
-          }
-      }
-      else
-      {
+      if($Element->name == "Sol"){
           echo    "Bottom:".((-1*($Element->size/2)) ).";\n";
           echo    "Left:".((-1*($Element->size/2)) ).";\n";
       }
@@ -102,23 +90,18 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
       setInterval(function(){
 
         var element = document.getElementById(''+name+'');
-        var angle = 1;
         var w = size;
         var h = size;
 
         //x = Math.cos(angle * Math.PI / 180);
         x = w * Math.cos((Date.now()%60000)/60000 * Math.PI * speed) * (size/2);
-        y = (h * Math.sin((Date.now()%60000)/60000 * Math.PI * speed) * (size/2) )/1.1;
+        y = (h * Math.sin((Date.now()%60000)/60000 * Math.PI * speed) * (size/2));
         //y = Math.sin(angle * Math.PI / 180);
 
-        angle++;
         document.getElementById(name).style.left=x;
         document.getElementById(name).style.bottom=y;
 
-        if (angle > 360) {
-            angle = 1;
-        }
-      }, 10);
+      }, 1);
       }
 
     }
@@ -130,7 +113,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
     <?php
     foreach($list->Elements as $Element){
       echo "<script>
-        FloatInCircle(\"".$Element->name."\",\"".$Element->x."\",\"".$Element->y."\",\"".$Element->speed."\",\"".$Element->size."\");
+        FloatInCircle(\"".$Element->name."\",\"".($Element->position)."\",\"".($Element->position)."\",\"".$Element->speed."\",\"".$Element->size."\");
       </script>";
     }
     ?>
