@@ -2,7 +2,7 @@
 $url = 'http://' . $_SERVER['HTTP_HOST'];
 $url .= rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $tmp = explode(@"/", $url);
-$url = $tmp[0].'//'.$tmp[1].$tmp[2].'/'.$tmp[3].'/'; //developer path
+$url = $tmp[0].'//'.$tmp[1].$tmp[2].'/'.$tmp[3].'/'.$tmp[4]; //developer path
 if(explode(@".",explode(@"/",$_SERVER['PHP_SELF'])[3])[0] != "redirect"){
     // check hvis man er på redirect siden men ikke include/required
     header('Location: ' . $url, true, 302);
