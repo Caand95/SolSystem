@@ -2,7 +2,7 @@
 //Content
 if (empty($_GET['page']) || $_GET['page'] == "Forside") 
 {
-    include "View/ViewDefault.php";
+    include "View/Default.php";
 } 
 else if (!empty($_GET['page'])) 
 {
