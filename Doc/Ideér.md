@@ -50,5 +50,7 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ### View 3 - Wikipedia
 
+## Planeter info
 
+![](C:\xampp\htdocs\SolSystem\Doc\info af planeter.png)
 
