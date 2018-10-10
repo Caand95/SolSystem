@@ -39,3 +39,16 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 ## Resten af Sitets functionalitet.
 
 ![](C:\xampp\htdocs\SolSystem\Doc\Overview.png)
+
+### View 1 - Solsystem Oversigt
+
+
+
+### View 2 - Solsystem Info
+
+
+
+### View 3 - Wikipedia
+
+
+
