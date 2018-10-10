@@ -54,7 +54,24 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ![](.\billeder\info af planeter.png)
 
+### Stored Procedure
+
+#### view 1
+
+``Select * from planets``
+
+#### view 2
+
+``select * from planets where planet.name = something``
+
+#### view 3 
+
+``select * from celestrialElements``
+
+``select * from celestrialElements where celestrialelemets.name = something Else``
+
 ## Classes
 
 View klasser har Dependency injection af Planets
 
+​	
