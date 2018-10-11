@@ -9,19 +9,35 @@ function GetInfo(){
                 "hasRings" => "false",
                 "color" => "orange"
               ),
+        "Mercury" => array(
+                "name" => "Mercury",
+                "size" => 10,
+                "speed" => 10,
+                "position" => 10,
+                "hasRings" => "false",
+                "color" => "darkblue"
+            ),
+        "Venus" => array(
+                "name" => "Venus",
+                "size" => 20,
+                "speed" => 20,
+                "position" => 8,
+                "hasRings" => "false",
+                "color" => "green"
+            ),
             "Earth" => array(
                 "name" => "Earth",
-                "size" => 20,
-                "speed" => 40,
-                "position" => 2,
+                "size" => 25,
+                "speed" => 35,
+                "position" => 12,
                 "hasRings" => "false",
-                "color" => "blue"
+                "color" => "teal"
             ),
             "Mars" => array(
                 "name" => "Mars",
-                "size" => 10,
+                "size" => 15,
                 "speed" => 50,
-                "position" => 5,
+                "position" => 16,
                 "hasRings" => "false",
                 "color" => "red"
             ),
@@ -29,7 +45,7 @@ function GetInfo(){
                 "name" => "Pluto",
                 "size" => 30,
                 "speed" => 4,
-                "position" => 1,
+                "position" => 20,
                 "hasRings" => "false",
                 "color" => "darkgrey"
             )
@@ -43,31 +59,36 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
 
 <!-- CSS - info fra php -->
 <style>
-  .element-solsystem{
-      position:absolute;
-      top:50%;
-      bottom:50%;
-      left:50%;
-      right:50%;
-  }
-  .element{
-      position:absolute;
-      border:solid 1px transparent !important;
-      border-radius: 500px;
+    .element-solsystem {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
     }
-<?php
-  foreach($list->Elements as $Element){
-      echo "\n#".$Element->name."{\n";
-      echo    "Height:".($Element->size).";\n";
-      echo    "Width:".($Element->size).";\n";
-      echo    "background-color:".$Element->color.";\n";
 
-      if($Element->name == "Sol"){
-          echo    "Bottom:".((-1*($Element->size/2)) ).";\n";
-          echo    "Left:".((-1*($Element->size/2)) ).";\n";
-      }
-    echo "}";
-  }?>
+    .element {
+        position: absolute;
+        border: solid 1px transparent !important;
+        border-radius: 500px;
+    }
+
+    <?php foreach($list->Elements as $Element) {
+        echo "\n#".$Element->name."{\n";
+        echo "Height:".($Element->size).";\n";
+        echo "Width:".($Element->size).";\n";
+        echo "background-color:".$Element->color.";\n";
+
+        if($Element->name=="Sol") {
+            echo "Bottom:".((-1*($Element->size/2))).";\n";
+            echo "Left:".((-1*($Element->size/2))).";\n";
+        }
+
+        echo "}";
+    }
+
+    ?>
+
 </style>
 
 
@@ -78,34 +99,33 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
     <!-- PHP -->
     <?php
     foreach($list->Elements as $Element){
-        echo"<div id=\"".$Element->name."\" class=\"element\"></div>";
+        echo"<div id=\"".$Element->name."\" class=\"element\">$Element->name</div>";
     }
     ?>
 
     <!-- JAVASCRIPT -->
     <script>
-    function FloatInCircle(name, x, y, speed, size) {
-      if(name != "Sol"){
+        function FloatInCircle(name, x, y, speed, size, position) {
+            if (name != "Sol") {
 
-      setInterval(function(){
+                setInterval(function() {
 
-        var element = document.getElementById(''+name+'');
-        var w = size;
-        var h = size;
+                    var element = document.getElementById('' + name + '');
+                    var w = size;
+                    var h = size;
 
-        //x = Math.cos(angle * Math.PI / 180);
-        x = w * Math.cos((Date.now()%60000)/60000 * Math.PI * speed) * (size/2);
-        y = (h * Math.sin((Date.now()%60000)/60000 * Math.PI * speed) * (size/2));
-        //y = Math.sin(angle * Math.PI / 180);
+                    //x = Math.cos(angle * Math.PI / 180);
+                    x = position* Math.cos((Date.now() % 60000) / 60000 * Math.PI * speed) * (size / 2);
+                    y = (position* Math.sin((Date.now() % 60000) / 60000 * Math.PI * speed) * (size / 2));
+                    //y = Math.sin(angle * Math.PI / 180);
 
-        document.getElementById(name).style.left=x;
-        document.getElementById(name).style.bottom=y;
+                    document.getElementById(name).style.left = x;
+                    document.getElementById(name).style.bottom = y;
 
-      }, 1);
-      }
+                }, 10);
+            }
 
-    }
-
+        }
 
     </script>
 
@@ -113,7 +133,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
     <?php
     foreach($list->Elements as $Element){
       echo "<script>
-        FloatInCircle(\"".$Element->name."\",\"".($Element->position)."\",\"".($Element->position)."\",\"".$Element->speed."\",\"".$Element->size."\");
+        FloatInCircle(\"".$Element->name."\",\"".($Element->position/2)."\",\"".($Element->position/2)."\",\"".$Element->speed."\",\"".$Element->size."\",\"$Element->position\");
       </script>";
     }
     ?>
