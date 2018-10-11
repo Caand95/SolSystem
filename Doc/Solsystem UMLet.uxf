@@ -1,0 +1,65 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>440</y><w>400</w><h>60</h></coordinates><panel_attributes>PlanetDbRepository
+--
+--
++ PlanetDbRepository(host : string, user : string, pass: string, db : string)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>290</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+IPlanetRepository
+--
+GetPlanets() : List&lt;Planet&gt;
+GetPlanet(name : string) : Planet</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>360</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>40</y><w>140</w><h>220</h></coordinates><panel_attributes>Planet
+--
+- name : string
+- description : string
+- imagePath : string
+- hexColor : string
+- kmDiameter : int
+- sunDistance : float
+- orbitalPeriodDays : int
+- mass : float
+- temperature : int
+- moonCount : int
+- hasRings : bool
+- planetType : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>290</y><w>400</w><h>100</h></coordinates><panel_attributes>/DbRepository/
+--
+# dbCon : MysqlConnection
+--
+# PlanetDbRepository(host : string, user : string, pass: string, db : string)
+# Open()
+# Close()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>378</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>580</y><w>250</w><h>120</h></coordinates><panel_attributes>PlanetController
+--
+- planetRepository : IPlanetRepository
+--
++ PlanetController()
++ GetPlanets() : List&lt;Planet&gt;
++ GetPlanet(name : string) : Planet
++ GetPlanetFact(planetName : string) : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>600</y><w>180</w><h>60</h></coordinates><panel_attributes>SolarSystemView
+--
+- controller : PlanetController</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>670</y><w>180</w><h>60</h></coordinates><panel_attributes>PlanetWheelView
+--
+- controller : PlanetController</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>740</y><w>220</w><h>60</h></coordinates><panel_attributes>WikiView
+--
+- controller : CelestialElementController</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>440</y><w>460</w><h>60</h></coordinates><panel_attributes>CelestialElementDbRepository
+--
+--
++ CelestialElementDbRepository(host : string, user : string, pass: string, db : string)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>290</y><w>310</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+ICelestialElementRepository
+--
+GetCelestialElements() : List&lt;CelestialElement&gt;
+GetCelestialElement(name : string) : CelestialElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>360</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>740</y><w>330</w><h>100</h></coordinates><panel_attributes>CelestialElementController
+--
+- celestialElementRepository : ICelestialElementRepository
+--
++ CelestialElementController()
++ GetCelestialElements() : List&lt;CelestialElement&gt;
++ GetCelestialElement(name : string) : CelestialElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>180</y><w>140</w><h>80</h></coordinates><panel_attributes>CelestialElement
+--
+- name : string
+- description : string
+- imagePath : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>378</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>810</y><w>180</w><h>60</h></coordinates><panel_attributes>PlanetFactHandler
+--
+- controller : PlanetController</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>640</x><y>560</y><w>280</w><h>330</h></coordinates><panel_attributes>View
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>140</x><y>540</y><w>370</w><h>320</h></coordinates><panel_attributes>Controller
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>0</y><w>1020</w><h>520</h></coordinates><panel_attributes>Model
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
