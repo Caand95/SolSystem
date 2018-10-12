@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <?php
-        require_once "./Model/PlanetController.php";
+        require_once "./Controller/PlanetController.php";
 
         $controller = new PlanetController();
         $planets = $controller->getPlanets();
