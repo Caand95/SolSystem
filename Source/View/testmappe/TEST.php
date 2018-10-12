@@ -3,7 +3,7 @@ function GetInfo(){
     return array(
             "Sol" => array(
                 "name" => "Sol",
-                "size" => 50,
+                "size" => 59.6,
                 "speed" => 0,
                 "position" => 0,
                 "hasRings" => "false",
@@ -12,32 +12,40 @@ function GetInfo(){
         "Mercury" => array(
                 "name" => "Mercury",
                 "size" => 10,
-                "speed" => 10,
+                "speed" => 8,
                 "position" => 10,
                 "hasRings" => "false",
                 "color" => "darkblue"
             ),
         "Venus" => array(
                 "name" => "Venus",
-                "size" => 20,
-                "speed" => 20,
-                "position" => 8,
+                "size" => 15,
+                "speed" => 22.5,
+                "position" => 14,
                 "hasRings" => "false",
                 "color" => "green"
             ),
             "Earth" => array(
                 "name" => "Earth",
-                "size" => 25,
-                "speed" => 35,
-                "position" => 12,
+                "size" => 28,
+                "speed" => 35.6,
+                "position" => 18,
                 "hasRings" => "false",
                 "color" => "teal"
             ),
             "Mars" => array(
                 "name" => "Mars",
                 "size" => 15,
-                "speed" => 50,
-                "position" => 16,
+                "speed" => 50.3,
+                "position" => 22,
+                "hasRings" => "false",
+                "color" => "red"
+            ),
+            "Jupiter" => array(
+                "name" => "Jupiter",
+                "size" => 86.8,
+                "speed" => 50.3,
+                "position" => 12,
                 "hasRings" => "false",
                 "color" => "red"
             ),
@@ -45,7 +53,7 @@ function GetInfo(){
                 "name" => "Pluto",
                 "size" => 30,
                 "speed" => 4,
-                "position" => 20,
+                "position" => 50,
                 "hasRings" => "false",
                 "color" => "darkgrey"
             )
@@ -99,7 +107,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
     <!-- PHP -->
     <?php
     foreach($list->Elements as $Element){
-        echo"<div id=\"".$Element->name."\" class=\"element\">$Element->name</div>";
+        echo"<div id=\"".$Element->name."\" class=\"element\"></div>";
     }
     ?>
 
@@ -110,20 +118,21 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
 
                 setInterval(function() {
 
-                    var element = document.getElementById('' + name + '');
-                    var w = size;
-                    var h = size;
+                        var element = document.getElementById('' + name + '');
+                        var sunsize = document.getElementById("Sol");
+                        var w = size;
+                        var h = size;
 
-                    //x = Math.cos(angle * Math.PI / 180);
-                    x = position* Math.cos((Date.now() % 60000) / 60000 * Math.PI * speed) * (size / 2);
-                    y = (position* Math.sin((Date.now() % 60000) / 60000 * Math.PI * speed) * (size / 2));
+                        //x = Math.cos(angle * Math.PI / 180);
+                        x = position * Math.cos((Date.now() % 60000) / 600000 * Math.PI * speed) * (size / 2);
+                        y = (position * Math.sin((Date.now() % 60000) / 600000 * Math.PI * speed) * (size / 2)) / 1.1;
                     //y = Math.sin(angle * Math.PI / 180);
 
-                    document.getElementById(name).style.left = x;
-                    document.getElementById(name).style.bottom = y;
+                    document.getElementById(name).style.left = x+sunsize.style.width; 
+                    document.getElementById(name).style.bottom = y+sunsize.style.height;
 
                 }, 10);
-            }
+        }
 
         }
 

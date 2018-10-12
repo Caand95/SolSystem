@@ -4,7 +4,7 @@
 
 Vi har snakket om at have disse elementer ind over vores projekt.
 
-![](.\billeder\43476120_247507859281397_2510296328815247360_n.jpg)
+![](.\Billeder\oversigt fra dag 1.jpg)
 
 | Krav                    | Miljø / Produkt                   |
 | ----------------------- | --------------------------------- |
@@ -17,7 +17,7 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 ## Views og deres teoretiske functionaliteter
 
-### Oversigt 
+### Oversigt
 
 > *SolSystem* oversigt med mulighed for at trykke på en planet, for at gå over til **Info** skærmen.
 
@@ -74,4 +74,4 @@ Vi har snakket om at have disse elementer ind over vores projekt.
 
 View klasser har Dependency injection af Planets
 
-​	
+	
