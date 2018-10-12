@@ -1,20 +1,43 @@
 /*META*/
 
 /*HEADER*/
-.header{
-    display:flex;
-    float:left;
+.header {
+    display: flex;
+    float: left;
+    margin: 0.5% 0;
+    /*box-shadow: 0px 6px 7.5px -8px black;*/
 }
+
+.logo-text {
+    margin: auto 5%;
+    text-decoration: none !important;
+    color: mediumpurple;
+    margin-top: -0.2rem;
+}
+
+.logo-text:hover {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
 /** NAVBAR **/
 .menubar {
-    float:right
+    padding-left: 50px;
+    margin: auto;
     min-width: 100%;
-    box-shadow: 0px 6px 7.5px -8px black;
-    background: #f0f8ff;
+    width:100%;
+}
+
+.menubar-item a button,
+.menubar-item dropdown a button {
+    padding: .375rem 2.7rem !important;
+    background-color: #212529;
+    border: blueviolet .1rem solid;
+    color: mediumpurple;
+    border-radius: 9px;
 }
 
 .menubar-item {
-    padding: 8px 0px;
+    padding: 8px 5px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -50,7 +73,16 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 0px 0px 7px 7px;
-    top: 27px;
+    top: 30px;
+    background-color: #212529;
+    width: 100%;
+    border: blueviolet .1rem solid;
+    color: mediumpurple;
+    border-top:none;
+    border-top-left-radius: none;
+    border-top-right-radius: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 
 .dropdown-content a {
@@ -68,5 +100,22 @@ body {
 }
 
 /*FOOTER*/
+
+/*TAGS*/
+a,a button {
+    text-decoration: none !important;
+    color: mediumpurple !important;
+}
+
+a:hover, a:hover button:hover{
+    text-decoration: none !important;
+    text-shadow: 2px 2px 5px darkblue;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+a:selected,a:selected button:selected {
+    text-decoration: none !important;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
 
 /*ID*/

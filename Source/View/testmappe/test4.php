@@ -149,7 +149,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
                     }
                     document.getElementById(name).style.left = x;
                     document.getElementById(name).style.bottom = y;
-                }, 10000);
+                }, 1);
             }
         }
 

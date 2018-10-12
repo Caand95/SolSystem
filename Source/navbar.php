@@ -32,11 +32,11 @@ $listCelestialElements = json_decode(json_encode(GetCelestial()), FALSE);
 
 ?>
 <!-- first item -->
-<span class="menubar-item">
-    <a href="?page=View1">
-        <button class="btn">View1</button>
-    </a>
+<section class="menubar">
     <span class="menubar-item">
+        <a href="?page=View1">
+            <button class="btn">View1</button>
+        </a>
     </span>
 
     <!-- second item -->
@@ -73,3 +73,4 @@ $listCelestialElements = json_decode(json_encode(GetCelestial()), FALSE);
             </section>
         </section>
     </span>
+</section>
