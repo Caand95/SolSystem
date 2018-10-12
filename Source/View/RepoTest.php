@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <?php
-        require_once "../Model/PlanetController.php";
+        require_once "./Model/PlanetController.php";
 
         $controller = new PlanetController();
         $planets = $controller->getPlanets();
@@ -36,9 +36,9 @@
                 echo     "<td>";
                 echo         $planet->name;
                 echo     "</td>";
-                echo     "<td><pre>";
+                echo     "<td>";
                 echo         $planet->description;
-                echo     "</pre></td>";
+                echo     "</td>";
                 echo     "<td>";
                 echo         $planet->imagePath;
                 echo     "</td>";

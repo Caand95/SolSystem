@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Model/PlanetDbRepository.php";
+require_once "./Model/PlanetDbRepository.php";
 
 class PlanetController
 {

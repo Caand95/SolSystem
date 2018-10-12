@@ -1,8 +1,8 @@
 <?php
 
-require_once "../Model/DbRepository.php";
-require_once "../Model/iPlanetRepository.php";
-require_once "../Model/Planet.php";
+require_once "./Model/DbRepository.php";
+require_once "./Model/iPlanetRepository.php";
+require_once "./Model/Planet.php";
 
 class PlanetDbRepository extends DbRepository implements iPlanetRepository
 {
@@ -76,21 +76,21 @@ class PlanetDbRepository extends DbRepository implements iPlanetRepository
                 die("GetPlanets() Query failed: " . $this->sqlCon->error);
             }
 
-            //while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-            while ($row = $result->fetch_array(MYSQLI_NUM)) {
+            //while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            while ($row = $result->fetch_assoc()) {
                 $planet = new planet(
-                    $row[0],   // Name
-                    $row[1],   // Description
-                    $row[2],   // ImagePath
-                    $row[3],   // HexColor
-                    $row[4],   // KmDiameter
-                    $row[5],   // SunDistance
-                    $row[6],   // OrbitalPeriodDays
-                    $row[7],   // Mass
-                    $row[8],   // Temperature
-                    $row[9],   // MoonCount
-                    $row[10],  // HasRings
-                    $row[11]); // PlanetType
+                    $row['NAME'],
+                    $row['Description'],
+                    $row['ImagePath'],
+                    $row['HexColor'],
+                    $row['KmDiameter'],
+                    $row['SunDistance'],
+                    $row['OrbitalPeriodDays'],
+                    $row['Mass'],
+                    $row['Temperature'],
+                    $row['MoonCount'],
+                    $row['HasRings'],
+                    $row['PlanetType']);
 
                 array_push($planets, $planet);
             }
