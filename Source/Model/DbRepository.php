@@ -27,14 +27,20 @@ abstract class DbRepository
 
     protected function open() 
     {
-        $this->sqlCon = new mysqli($hostname, $dbUser, $dbPassword, $dbName);
+        $this->sqlCon = new mysqli(
+            $this->hostname, 
+            $this->dbUser, 
+            $this->dbPassword, 
+            $this->dbName);
 
-        if ($sqlCon->connect_errno) { // TODO Error handling
-            echo "MySQL connection failed: " . $sqlCon->connect_errno . " - " . $sqlCon->connect_error;
+        if ($this->sqlCon->connect_errno) { // TODO Error handling
+            echo "MySQL connection failed: " 
+                . $this->sqlCon->connect_errno 
+                . " - " . $this->sqlCon->connect_error;
         }
     }
 
-    private function close()
+    protected function close()
     {
         $this->sqlCon->close();
     }

@@ -1,12 +1,14 @@
 <?php
 
+require_once "../Model/PlanetDbRepository.php";
+
 class PlanetController
 {
     private $planetRepository = null;
 
     public function __construct()
     {
-        $this->planetRepository = new PlanetDbRepository("127.0.0.1", "user", "pass", "PlanetDB");
+        $this->planetRepository = new PlanetDbRepository("127.0.0.1", "root", "", "PlanetDB");
     }
 
     public function __destruct()
@@ -16,7 +18,7 @@ class PlanetController
 
     public function getPlanet($name) : Planet 
     {
-        $this->planetRepository->getPlanet($name);
+        $planet = $this->planetRepository->getPlanet($name);
         return $planet;
     }
 
