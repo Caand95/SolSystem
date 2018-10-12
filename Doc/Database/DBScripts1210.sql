@@ -35,10 +35,8 @@ CREATE TABLE Planet (
 CREATE PROCEDURE GetPlanets()
 ​	SELECT * FROM Planet;
 
-
 CREATE PROCEDURE GetCelestialElements()
 ​	SELECT * FROM CelestialElement;
-
 
 DELIMITER //
 CREATE PROCEDURE GetPlanet(IN PlanetName VARCHAR(100))
