@@ -16,20 +16,20 @@ abstract class DbRepository
         $this->dbName       = $db;
     }
 
-    function __destruct()
+    protected function __destruct()
     {
         $this->hostname   = null;
         $this->dbUser     = null;
         $this->dbPassword = null;
         $this->dbName     = null;
         $this->sqlCon     = null;
-  	}	
+  	}
 
     protected function open() 
     {
         $this->sqlCon = new mysqli($hostname, $dbUser, $dbPassword, $dbName);
 
-        if ($sqlCon->connect_errno) {
+        if ($sqlCon->connect_errno) { // TODO Error handling
             echo "MySQL connection failed: " . $sqlCon->connect_errno . " - " . $sqlCon->connect_error;
         }
     }
