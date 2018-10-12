@@ -47,4 +47,26 @@ Jeg blev færdig i går aftes, og har studeret lidt php da jeg aldrig har rodet 
 
 Dag 3
 
+Casper arbejdede videre, mens Dan lavede et repository pattern.
+
+Jeg lavede os nogle stored procedures til vores applikation vi skal bruge til at get enkelte planeter, alle planeter, enkelte celesial items, og alle celesial items.
+
+Jeg kiggede også på noget mere PHP og JavaScript for at kunne være med til nogle af de daglige opgaver.
+
+#############################################################################
+
+Dag 4
+
+#############################################################################
+
+Dag 5
+
+#############################################################################
+
+Dag 6
+
+#############################################################################
+
+Dag 7
+
 #############################################################################
