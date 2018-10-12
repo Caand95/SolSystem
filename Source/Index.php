@@ -21,8 +21,9 @@
 	<header class="header">
 	   <a href="?page=Forside">
            <!--<img class="logo" src="Image/logo.png" />-->
-           <h1 class="logo-text">SolSystemet</h1>
+           <h1 class="logo-text">SolSystemet</h1> 
         </a>
+        <?php include "./navbar.php"; ?>
     </header>
 
 	<!-- Content -->

@@ -1,7 +1,72 @@
-body {
-	width: 100%;
-  height: 100%;
-  background: url("../Image/background.jpg");
-  background-size: cover;
-	margin: 0;
+/*META*/
+
+/*HEADER*/
+.header{
+    display:flex;
+    float:left;
 }
+/** NAVBAR **/
+.menubar {
+    float:right
+    min-width: 100%;
+    box-shadow: 0px 6px 7.5px -8px black;
+    background: #f0f8ff;
+}
+
+.menubar-item {
+    padding: 8px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menubar-item:focus {
+    outline: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover a {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 6px 7.5px -8px black;
+    padding: 8px 0px;
+    z-index: 1;
+    border: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0px 0px 7px 7px;
+    top: 27px;
+}
+
+.dropdown-content a {
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+
+/*BODY*/
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../Image/background.jpg");
+    background-size: cover;
+    margin: 0;
+}
+
+/*FOOTER*/
+
+/*ID*/
