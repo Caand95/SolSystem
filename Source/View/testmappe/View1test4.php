@@ -47,14 +47,14 @@ function GetInfo(){
                 "name" => "Saturn",
                 "size" => 715,
                 "speed" => 6,
-                "distance" => 936,
+                "distance" => 93.6,
                 "color" => "#fde4c2"
             ),
         "Uranus" => array(
                 "name" => "Uranus",
                 "size" => 294,
                 "speed" => 4.2,
-                "distance" => 1867,
+                "distance" => 186.7,
                 "color" => "#45caca"
             ),
         "Neptune" => array(
