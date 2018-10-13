@@ -1,3 +1,3 @@
 <?php
-    include "./View/testmappe/viewtest.php";
+    include "./View/testmappe/view2test.php";
 ?>
