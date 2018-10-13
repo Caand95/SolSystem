@@ -1,68 +1,11 @@
-<?php
-function GetInfo(){
-    return array(
-            "Sol" => array(
-                "name" => "Sol",
-                "size" => 59.6,
-                "speed" => 0,
-                "position" => 0,
-                "hasRings" => "false",
-                "color" => "orange"
-              ),
-        "Mercury" => array(
-                "name" => "Mercury",
-                "size" => 10,
-                "speed" => 8,
-                "position" => 10,
-                "hasRings" => "false",
-                "color" => "darkblue"
-            ),
-        "Venus" => array(
-                "name" => "Venus",
-                "size" => 15,
-                "speed" => 22.5,
-                "position" => 14,
-                "hasRings" => "false",
-                "color" => "green"
-            ),
-            "Earth" => array(
-                "name" => "Earth",
-                "size" => 28,
-                "speed" => 35.6,
-                "position" => 18,
-                "hasRings" => "false",
-                "color" => "teal"
-            ),
-            "Mars" => array(
-                "name" => "Mars",
-                "size" => 15,
-                "speed" => 50.3,
-                "position" => 22,
-                "hasRings" => "false",
-                "color" => "red"
-            ),
-            "Jupiter" => array(
-                "name" => "Jupiter",
-                "size" => 86.8,
-                "speed" => 50.3,
-                "position" => 12,
-                "hasRings" => "false",
-                "color" => "red"
-            ),
-            "Pluto" => array(
-                "name" => "Pluto",
-                "size" => 30,
-                "speed" => 4,
-                "position" => 50,
-                "hasRings" => "false",
-                "color" => "darkgrey"
-            )
-        );
-}
+<?php //Snask
+    include "./Scripts/tmpGetInfo.php";
 
 $list = json_decode(json_encode(array("Elements" => array()), FALSE));
-$list->Elements = json_decode(json_encode(GetInfo()), FALSE);
+$list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
+
 ?>
+
 
 
 <!-- CSS - info fra php -->
@@ -93,9 +36,7 @@ $list->Elements = json_decode(json_encode(GetInfo()), FALSE);
         }
 
         echo "}";
-    }
-
-    ?>
+    }?>
 
 </style>
 

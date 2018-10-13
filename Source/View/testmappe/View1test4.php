@@ -1,84 +1,10 @@
-<?php
-function GetInfo(){
-    return array(
-            "Sol" => array(
-                "name" => "Sol",
-                "size" => 69.6,
-                "speed" => 0,
-                "distance" => 0,
-                "color" => "#ffbf4b"
-              ),
-        "Mercury" => array(
-                "name" => "Mercury",
-                "size" => 29,
-                "speed" => 29.7,
-                "distance" => 43.3,
-                "color" => "#babafb"
-            ),
-        "Venus" => array(
-                "name" => "Venus",
-                "size" => 76,
-                "speed" => 67.6,
-                "distance" => 21.7,
-                "color" => "#ff8100"
-            ),
-            "Earth" => array(
-                "name" => "Earth",
-                "size" => 79.13,
-                "speed" => 18.5,
-                "distance" => 94.4,
-                "color" => "#1e8ede"
-            ),
-            "Mars" => array(
-                "name" => "Mars",
-                "size" => 42,
-                "speed" => 15,
-                "distance" => 154.7,
-                "color" => "#dc3333"
-            ),
-            "Jupiter" => array(
-                "name" => "Jupiter",
-                "size" => 868,
-                "speed" => 8.1,
-                "distance" => 506.7,
-                "color" => "#a5632a"
-            ),
-        "Saturn" => array(
-                "name" => "Saturn",
-                "size" => 715,
-                "speed" => 6,
-                "distance" => 93.6,
-                "color" => "#fde4c2"
-            ),
-        "Uranus" => array(
-                "name" => "Uranus",
-                "size" => 294,
-                "speed" => 4.2,
-                "distance" => 186.7,
-                "color" => "#45caca"
-            ),
-        "Neptune" => array(
-                "name" => "Neptune",
-                "size" => 280,
-                "speed" => 3.4,
-                "distance" => 2817,
-                "color" => "#3aa5a5"
-            ),
-        "Pluto" => array(
-                "name" => "Pluto",
-                "size" => 36,
-                "speed" => 3,
-                "distance" => 4600,
-                "hasRings" => "false",
-                "color" => "#8e8585"
-            )
-        );
-}
+<?php //Snask
+    include "./Scripts/tmpGetInfo.php";
 
 $list = json_decode(json_encode(array("Elements" => array()), FALSE));
-$list->Elements = json_decode(json_encode(GetInfo()), FALSE);
-?>
+$list->Elements = json_decode(json_encode(GetTestInfoBig()), FALSE);
 
+?>
 
 <!-- CSS - info fra php -->
 <style>

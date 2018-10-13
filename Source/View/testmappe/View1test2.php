@@ -1,55 +1,10 @@
-<?php
-//function der laver/henter information
-function GetInfo(){
-    return array(
-            "Sol" => array(
-                "name" => "Sol",
-                "size" => 50,
-                "speed" => 0,
-                "distance" => 0,
-                "hasRings" => "false",
-                "color" => "yellow"
-              ),
-            "Mercury" => array(
-                "name" => "Mercury",
-                "size" => 29.00,
-                "speed" => 88,
-                "distance" => 43.3,
-                "hasRings" => "false",
-                "color" => "darkorange"
-            ),
-        "Venus" => array(
-                "name" => "Venus",
-                "size" => 76.00,
-                "speed" => 255,
-                "distance" => 67.6,
-                "hasRings" => "false",
-                "color" => "orange"
-        ),
-            "Earth" => array(
-                "name" => "Earth",
-                "size" => 79.13,
-                "speed" => 365,
-                "distance" => 94.4,
-                "hasRings" => "false",
-                "color" => "blue"
-            /*),
-
-            "Pluto" => array(
-                "name" => "Pluto",
-                "size" => 36.00,
-                "speed" => 248,
-                "distance" => 4600,
-                "hasRings" => "false",
-                "color" => "darkgrey"
-            */)
-        );
-}
+<?php //Snask
+    include "./Scripts/tmpGetInfo.php";
 
 $list = json_decode(json_encode(array("Elements" => array()), FALSE));
-$list->Elements = json_decode(json_encode(GetInfo()), FALSE);
-?>
+$list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
 
+?>
 
 <!-- CSS - info fra php -->
 <style>
