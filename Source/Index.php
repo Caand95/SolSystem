@@ -24,6 +24,7 @@
            <!--<img class="logo" src="Image/logo.png" />-->
            <h1 class="logo-text">SolSystemet</h1> 
         </a>
+        <!--Menu-->
         <?php include "./navbar.php"; ?>
     </header>
 
