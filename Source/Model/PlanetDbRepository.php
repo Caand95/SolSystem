@@ -79,7 +79,7 @@ class PlanetDbRepository extends DbRepository implements iPlanetRepository
             //while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             while ($row = $result->fetch_assoc()) {
                 $planet = new planet(
-                    $row['NAME'],
+                    $row['Name'],
                     $row['Description'],
                     $row['ImagePath'],
                     $row['HexColor'],
