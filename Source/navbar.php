@@ -35,7 +35,7 @@ $listCelestialElements = json_decode(json_encode(GetCelestial()), FALSE);
 <section class="menubar">
     <span class="menubar-item">
         <a href="?page=View1">
-            <button class="btn">View1</button>
+            <button class="btn">SolSystemet Oversigt</button>
         </a>
     </span>
 
@@ -43,7 +43,7 @@ $listCelestialElements = json_decode(json_encode(GetCelestial()), FALSE);
     <span class="menubar-item">
         <section class="dropdown">
             <a href="?page=View2">
-                <button class="btn">View2</button>
+                <button class="btn">SolSystem Info</button>
             </a>
             <section class="dropdown-content">
                 <?php
@@ -60,7 +60,7 @@ $listCelestialElements = json_decode(json_encode(GetCelestial()), FALSE);
     <span class="menubar-item">
         <section class="dropdown">
             <a href="?page=View3">
-                <button class="btn">View3</button>
+                <button class="btn">Rummets Elementer</button>
             </a>
             <section class="dropdown-content">
                 <?php
