@@ -40,24 +40,22 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
 </style>
 
 <section>
-    <section class="element-nav">
+<!-- View SideBar -->
+    <section class="sidenav-nav">
         <?php
             foreach($ListofPlanets as $Planet){
-                echo"<div class=\"element-nav-item\">$Planet->name</div>\n";
+                echo"<div class=\"sidenav-item\"><p>$Planet->name</p></div>\n";
             }
         ?>
     </section>
-    <!-- HTML -->
+<!-- View Content -->
     <section class="element-solsystem">
-
-        <!-- PHP -->
         <?php
         foreach($list->Elements as $Element){
             echo"<div id=\"".$Element->name."\" class=\"element\"></div>";
         }
         ?>
-
-        <!-- JAVASCRIPT -->
+ <!-- Snask -->
         <script>
             function FloatInCircle(name, x, y, speed, size, position) {
                 if (name != "Sol") {
