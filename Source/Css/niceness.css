@@ -125,14 +125,16 @@ body {
     font-weight: 700;
     width: 80%;
     text-align: center;
-    background-color: #2125294d;
+    background-color: #212529c7;
     margin: 2.5% 5%;
     border-radius: 15px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
 }
 
 .sidenav-item:hover {
-    border: solid 2px mediumpurple;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    border: solid 2px white;
+    text-shadow: 0 0 3px #666, 0 0 5px #666;
 }
 
 /**View1**/
