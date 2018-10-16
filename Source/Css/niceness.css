@@ -105,13 +105,13 @@ body {
 
 /*Views*/
 .sidenav-nav {
-    /*border-right: solid 2px darkslategray;*/
+    border-right: solid 2px darkslategray;
     width: 15%;
     display: block;
     height: 100%;
     margin: 2.5% 0;
-    overflow: hidden
-        /*background-color: darkslategray;    */
+    overflow: hidden;
+    background-color: darkslategray;    
 }
 
 .sidenav-item {
