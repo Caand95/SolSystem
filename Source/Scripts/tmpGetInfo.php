@@ -9,22 +9,22 @@ function GetTestInfoBig(){
                 "distance" => 0,
                 "color" => "#ffbf4b"
               ),
-        "Mercury" => array(
-                "name" => "Mercury",
+            "Merkur" => array(
+                "name" => "Merkur",
                 "size" => 29,
                 "speed" => 29.7,
                 "distance" => 43.3,
                 "color" => "#babafb"
             ),
-        "Venus" => array(
+            "Venus" => array(
                 "name" => "Venus",
                 "size" => 76,
                 "speed" => 67.6,
                 "distance" => 21.7,
                 "color" => "#ff8100"
             ),
-            "Earth" => array(
-                "name" => "Earth",
+            "Jorden" => array(
+                "name" => "Jorden",
                 "size" => 79.13,
                 "speed" => 18.5,
                 "distance" => 94.4,
@@ -44,28 +44,28 @@ function GetTestInfoBig(){
                 "distance" => 506.7,
                 "color" => "#a5632a"
             ),
-        "Saturn" => array(
+            "Saturn" => array(
                 "name" => "Saturn",
                 "size" => 715,
                 "speed" => 6,
                 "distance" => 93.6,
                 "color" => "#fde4c2"
             ),
-        "Uranus" => array(
+            "Uranus" => array(
                 "name" => "Uranus",
                 "size" => 294,
                 "speed" => 4.2,
                 "distance" => 186.7,
                 "color" => "#45caca"
             ),
-        "Neptune" => array(
-                "name" => "Neptune",
+            "Neptun" => array(
+                "name" => "Neptun",
                 "size" => 280,
                 "speed" => 3.4,
                 "distance" => 2817,
                 "color" => "#3aa5a5"
             ),
-        "Pluto" => array(
+            "Pluto" => array(
                 "name" => "Pluto",
                 "size" => 36,
                 "speed" => 3,
@@ -86,15 +86,15 @@ function GetTestInfo(){
                 "hasRings" => "false",
                 "color" => "orange"
               ),
-        "Mercury" => array(
-                "name" => "Mercury",
+            "Merkur" => array(
+                "name" => "Merkur",
                 "size" => 10,
                 "speed" => 8,
                 "position" => 10,
                 "hasRings" => "false",
                 "color" => "darkblue"
             ),
-        "Venus" => array(
+            "Venus" => array(
                 "name" => "Venus",
                 "size" => 15,
                 "speed" => 22.5,
@@ -102,8 +102,8 @@ function GetTestInfo(){
                 "hasRings" => "false",
                 "color" => "green"
             ),
-            "Earth" => array(
-                "name" => "Earth",
+            "Jorden" => array(
+                "name" => "Jorden",
                 "size" => 28,
                 "speed" => 35.6,
                 "position" => 18,
