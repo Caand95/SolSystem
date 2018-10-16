@@ -43,9 +43,12 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
 <!-- View SideBar -->
     <section class="sidenav-nav">
         <?php
-            foreach($ListofPlanets as $Planet){
-                echo"<div class=\"sidenav-item\"><p>$Planet->name</p></div>\n";
-            }
+        //sort på nested objects value
+        usort($ListofPlanets,function($first,$second){return $first->sunDistance > $second->sunDistance;});
+            
+        foreach($ListofPlanets as $Planet){
+            echo"<div class=\"sidenav-item d-flex justify-content-center\">$Planet->name</div>\n";
+        }
         ?>
     </section>
 <!-- View Content -->
@@ -75,7 +78,7 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
                         document.getElementById(name).style.left = x+sunsize.style.width; 
                         document.getElementById(name).style.bottom = y+sunsize.style.height;
 
-                    }, 10);
+                    }, 300);
             }
 
             }

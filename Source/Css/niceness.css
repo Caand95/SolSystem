@@ -3,10 +3,9 @@
 /*HEADER*/
 .header {
     display: flex;
-    float: left;
-    margin: 0.5% 0;
-    /*box-shadow: 0px 6px 7.5px -8px black;*/
-    width:100%;
+    margin: 0.5% 0.5%;
+    /* box-shadow: 0px 6px 7.5px -8px black; */
+    width: 99%;
 }
 
 .logo-text {
@@ -26,7 +25,7 @@
 .menubar {
     padding-left: 50px;
     margin: auto;
-    width:100%;
+    width: 100%;
 }
 
 .menubar-item a button,
@@ -80,7 +79,7 @@
     width: 100%;
     border: blueviolet .1rem solid;
     color: mediumpurple;
-    border-top:none;
+    border-top: none;
     border-top-left-radius: none;
     border-top-right-radius: none;
     border-bottom-left-radius: 9px;
@@ -104,12 +103,17 @@ body {
 /*FOOTER*/
 
 /*Views*/
-.sidenav-nav{
-    border-left: solid 2px black;
-    width:15%;
+.sidenav-nav {
+    /*border-right: solid 2px darkslategray;*/
+    width: 15%;
     display: block;
+    height: 100%;
+    margin: 2.5% 0;
+    overflow: hidden
+        /*background-color: darkslategray;    */
 }
-.sidenav-item{
+
+.sidenav-item {
     border: solid 2px transparent;
     padding: 5% 5%;
     display: flex;
@@ -118,43 +122,55 @@ body {
     color: mediumpurple;
     margin: auto;
     font-weight: 700;
-    width: 100%;
+    width: 80%;
     text-align: center;
+    background-color: #2125294d;
+    margin: 2.5% 5%;
+    border-radius: 15px;
 }
-.sidenav-item:hover{
+
+.sidenav-item:hover {
     border: solid 2px mediumpurple;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+
+.sidenav-item p {}
+
 /**View1**/
-.element-solsystem{
-      position:absolute;
-      top:50%;
-      bottom:50%;
-      left:50%;
-      right:50%;
-  }
-.element{
-      position:absolute;
-      border:solid 0px transparent !important;
-      border-radius: 500px;
+.element-solsystem {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
 }
+
+.element {
+    position: absolute;
+    border: solid 0px transparent !important;
+    border-radius: 500px;
+}
+
 /**View2**/
 
 /**View3**/
 
 /*TAGS*/
-a,a button {
+a,
+a button {
     text-decoration: none !important;
     color: mediumpurple !important;
 }
 
-a:hover, a:hover button:hover{
+a:hover,
+a:hover button:hover {
     text-decoration: none !important;
     text-shadow: 2px 2px 5px darkblue;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
-a:selected,a:selected button:selected {
+a:selected,
+a:selected button:selected {
     text-decoration: none !important;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
