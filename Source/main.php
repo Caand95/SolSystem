@@ -1,4 +1,4 @@
-<?php include_once"./scripts/stars.php";
+<?php include_once "./scripts/stars.php";
 //Content
 if (empty($_GET['page']) || $_GET['page'] == "Forside") 
 {
