@@ -66,14 +66,14 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
 </script>
 <section>
     <!-- View SideBar -->
-    <section class="sidenav-nav">
+    <section class="sidenav-nav d-flex flex-column align-items-center">
         <?php
         // sort på nested objects value (Planet->sunDistance)
         usort($ListofPlanets,function($first,$second){return $first->sunDistance > $second->sunDistance;});
 
         // Print nav-item HTML elementer & kald PlanetHover for hvert element
         foreach($ListofPlanets as $Planet){
-            echo"<div id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
+            echo"<div id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center align-items-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
             echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"golden\");</script>\n";
         }
 
