@@ -101,6 +101,24 @@ body {
 
 /*FOOTER*/
 
+/*Views*/
+/**View1**/
+.element-solsystem{
+      position:absolute;
+      top:50%;
+      bottom:50%;
+      left:50%;
+      right:50%;
+  }
+.element{
+      position:absolute;
+      border:solid 0px transparent !important;
+      border-radius: 500px;
+}
+/**View2**/
+
+/**View3**/
+
 /*TAGS*/
 a,a button {
     text-decoration: none !important;
