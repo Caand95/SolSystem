@@ -18,6 +18,11 @@
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+        
+        <!-- SNIPPETS -->
+        <?php 
+            include_once "./scripts/HoverGlow.php";
+        ?>
 
 	</head>
     <body id="b0dy">
@@ -26,7 +31,8 @@
 	<header class="header">
 	   <a href="?page=Forside">
            <!--<img class="logo" src="Image/logo.png" />-->
-           <h1 class="logo-text">SolSystemet</h1> 
+           <h1 id="logo-text-h" class="logo-text">SolSystemet</h1> 
+           <script>HoverGlow("logo-text-h","logo-text-h","purple");</script>
         </a>
         <!--Menu-->
         <!--<?php //include "./navbar.php"; ?>-->

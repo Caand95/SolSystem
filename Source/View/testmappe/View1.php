@@ -37,11 +37,6 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
         echo "}";
     }?>
 
-    .planet-hover {
-        -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
-        -moz-animation: neon5 1.5s ease-in-out infinite alternate;
-        animation: neon5 1.5s ease-in-out infinite alternate;
-    }
 </style>
 
  <!-- Snask -->
@@ -68,11 +63,6 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
         }
     }
 
-    function PlanetHover(selectedElement,targetElement) {
-        $('#'+selectedElement).hover(
-            function(){ $('#'+targetElement).addClass('planet-hover'); console.log('Hover '+targetElement); },
-            function(){ $('#'+targetElement).removeClass('planet-hover'); console.log('Unhover '+targetElement); });
-    }
 </script>
 <section>
     <!-- View SideBar -->
@@ -84,7 +74,7 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
         // Print nav-item HTML elementer & kald PlanetHover for hvert element
         foreach($ListofPlanets as $Planet){
             echo"<div id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center\">$Planet->name</div>\n";
-            echo"<script>PlanetHover(\"sidenav-item-$Planet->name\", \"$Planet->name\");</script>\n";
+            echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"golden\");</script>\n";
         }
 
         // Kald PlanetHover for hvert nav-item element
