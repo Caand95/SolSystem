@@ -103,6 +103,7 @@ body {
     /*Static background*/
     background-size: cover;
     margin: 0;
+    overflow:hidden;
 }
 
 /*FOOTER*/
