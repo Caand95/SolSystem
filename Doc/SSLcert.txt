@@ -1,0 +1,8 @@
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout "C:\xampp\apache\conf\ssl.key\TeamPirates.key" -out "C:\xampp\apache\conf\ssl.crt\TeamPirates.crt"
+DK
+Sjaelland
+Ringsted
+ZBC
+TeamPirates
+localhost
+

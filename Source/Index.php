@@ -12,8 +12,12 @@
         
         <!-- FontAwesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-
+        
+        <!-- JQuery-->
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
 
 	</head>
     <body id="b0dy">
@@ -25,7 +29,7 @@
            <h1 class="logo-text">SolSystemet</h1> 
         </a>
         <!--Menu-->
-        <?php include "./navbar.php"; ?>
+        <!--<?php //include "./navbar.php"; ?>-->
     </header>
 
 	<!-- Content -->

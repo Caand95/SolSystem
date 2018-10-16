@@ -3,16 +3,18 @@
 /*HEADER*/
 .header {
     display: flex;
-    float: left;
-    margin: 0.5% 0;
-    /*box-shadow: 0px 6px 7.5px -8px black;*/
+    margin: 0.5% 0.5%;
+    /* box-shadow: 0px 6px 7.5px -8px black; */
+    width: 99%;
 }
 
 .logo-text {
-    margin: auto 5%;
+    display: flex;
+    margin: 1% 3%;
     text-decoration: none !important;
     color: mediumpurple;
-    margin-top: -0.2rem;
+    /* margin-top: -0.2rem; */
+    width: 12%;
 }
 
 .logo-text:hover {
@@ -23,8 +25,7 @@
 .menubar {
     padding-left: 50px;
     margin: auto;
-    min-width: 100%;
-    width:100%;
+    width: 100%;
 }
 
 .menubar-item a button,
@@ -78,7 +79,7 @@
     width: 100%;
     border: blueviolet .1rem solid;
     color: mediumpurple;
-    border-top:none;
+    border-top: none;
     border-top-left-radius: none;
     border-top-right-radius: none;
     border-bottom-left-radius: 9px;
@@ -94,7 +95,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: url("../Image/background.jpg");
+    /*background: url("../Image/background.jpg");*/ /*Static background*/
     background-size: cover;
     margin: 0;
 }
@@ -102,36 +103,100 @@ body {
 /*FOOTER*/
 
 /*Views*/
-/**View1**/
-.element-solsystem{
-      position:absolute;
-      top:50%;
-      bottom:50%;
-      left:50%;
-      right:50%;
-  }
-.element{
-      position:absolute;
-      border:solid 0px transparent !important;
-      border-radius: 500px;
+.sidenav-nav {
+    /*border-right: solid 2px darkslategray;*/
+    width: 15%;
+    display: block;
+    height: 100%;
+    margin: 2.5% 0;
+    overflow: hidden
+        /*background-color: darkslategray;    */
 }
+
+.sidenav-item {
+    border: solid 2px transparent;
+    padding: 5% 5%;
+    display: flex;
+    border-radius: 5px;
+    font-size: x-large;
+    color: mediumpurple;
+    margin: auto;
+    font-weight: 700;
+    width: 80%;
+    text-align: center;
+    background-color: #2125294d;
+    margin: 2.5% 5%;
+    border-radius: 15px;
+}
+
+.sidenav-item:hover {
+    border: solid 2px mediumpurple;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+/**View1**/
+.element-solsystem {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+}
+
+.element {
+    position: absolute;
+    border: solid 0px transparent !important;
+    border-radius: 500px;
+}
+
+@-webkit-keyframes neon5 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+  }
+  
+  
+  @-moz-keyframes neon5 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+  }
+  
+  @keyframes neon5 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+  }
+
 /**View2**/
 
 /**View3**/
 
 /*TAGS*/
-a,a button {
+a,
+a button {
     text-decoration: none !important;
     color: mediumpurple !important;
 }
 
-a:hover, a:hover button:hover{
+a:hover,
+a:hover button:hover {
     text-decoration: none !important;
     text-shadow: 2px 2px 5px darkblue;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
-a:selected,a:selected button:selected {
+a:selected,
+a:selected button:selected {
     text-decoration: none !important;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
