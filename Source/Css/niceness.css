@@ -242,7 +242,6 @@ a:selected button:selected {
 #rejs-racket {
     height: 75px;
     width: 75px;
-    margin-bottom: ;
     animation: racketfloat 2s ease-in-out infinite alternate;
     -webkit-animation: racketfloat 2s ease-in-out infinite alternate;
     -moz-animation: racketfloat 2s ease-in-out infinite alternate;
