@@ -85,13 +85,15 @@
         rejsContainer.css('left', (navWidth - rejsWidth) + 'px');
 
         // Animation: flyv mod midten af skærmen
-        var endLeft = ($('.main').width() - navWidth + rejsWidth) / 2;
+        var solarWidth = $('.main').width() - navWidth;
+        var rejsWidth = rejsWidth + ($('#rejs-knap').width() / 2); /*($('#rejs-racket').width() / 2);*/
+        var endLeft = (solarWidth + rejsWidth) / 2;
         $('#rejs-container').animate({
             left: '+=' + endLeft + 'px'
         }, {
             duration: 1500, 
-            easing: 'easeOutBack' /* easeOutBack easeOutElastic */
-        }); 
+            easing: 'easeOutBack'
+        });
     }
 
     function navigate() {
