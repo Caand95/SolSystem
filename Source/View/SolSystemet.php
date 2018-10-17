@@ -141,8 +141,8 @@
     </section>
     <section id="rejs-container">
         <button class="btn btn-secondary" id="rejs-knap">
-                Rejs til <span id="destination-tekst"></span>!
+            Rejs til <span id="destination-tekst"></span>!
         </button>
-            <img id="rejs-racket" src="./Image/Racket.png" />
+        <img id="rejs-racket" src="./Image/Racket.png" />
     </section>
 </section>
