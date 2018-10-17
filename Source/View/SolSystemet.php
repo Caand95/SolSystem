@@ -88,9 +88,15 @@
         var endLeft = ($('.main').width() - navWidth + rejsWidth) / 2;
         $('#rejs-container').animate({
             left: '+=' + endLeft + 'px'
-        }, 900, 'linear');
+        }, {
+            duration: 1500, 
+            easing: 'easeOutBack' /* easeOutBack easeOutElastic */
+        }); 
     }
 
+    function navigate() {
+        window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
+    }
 </script>
 
 <section>
@@ -154,7 +160,7 @@
     ?>
     </section>
     <section id="rejs-container">
-        <button class="btn btn-secondary" id="rejs-knap">
+        <button class="btn btn-secondary" id="rejs-knap" onclick="navigate()">
             Rejs til <span id="destination-tekst"></span>!
         </button>
         <img id="rejs-racket" src="./Image/Racket.png" />
