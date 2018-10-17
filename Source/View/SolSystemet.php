@@ -6,20 +6,6 @@
 
 <!-- CSS - info fra php -->
 <style>
-    .element-solsystem {
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        right: 50%;
-    }
-
-    .element {
-        position: absolute;
-        border: solid 1px transparent !important;
-        border-radius: 500px;
-    }
-
     <?php foreach($list->Elements as $Element) {
         echo "\n#".$Element->name."{\n";
         echo "Height:".($Element->size).";\n";
@@ -92,7 +78,7 @@
     </section>
 <!-- View Content -->
     <section class="element-solsystem" style="">
-        <div id="Sol" class=element style="Left:-30; Bottom:-30; Height:60; Width:60; background-color:Orange;"></div>
+        <div id="Sol" class="element"></div>
  <?php
     
         foreach($ListofShowPlanets->Elements as $Planet){

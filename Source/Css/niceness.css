@@ -186,8 +186,21 @@ body {
 
 .element {
     position: absolute;
-    border: solid 0px transparent !important;
+    /*border: solid 0px transparent !important;*/
+    border: solid 1px transparent !important;
     border-radius: 500px;
+}
+
+#sol {
+    Left: -30; 
+    Bottom: -30; 
+    Height: 60; 
+    Width: 60; 
+    background-color: Orange;
+    box-shadow: 0 0 10px orange,
+                0 0 60px orange,
+                0 0 200px yellow,
+                inset 0 0 80px yellow;
 }
 
 /**View2**/
