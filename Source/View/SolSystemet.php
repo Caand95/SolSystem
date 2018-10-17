@@ -94,6 +94,9 @@
         }); 
     }
 
+    function navigate() {
+        window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
+    }
 </script>
 <section>
     <!-- View SideBar -->
@@ -156,7 +159,7 @@
     ?>
     </section>
     <section id="rejs-container">
-        <button class="btn btn-secondary" id="rejs-knap">
+        <button class="btn btn-secondary" id="rejs-knap" onclick="navigate()">
             Rejs til <span id="destination-tekst"></span>!
         </button>
         <img id="rejs-racket" src="./Image/Racket.png" />
