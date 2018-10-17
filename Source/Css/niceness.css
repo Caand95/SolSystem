@@ -234,9 +234,9 @@ a:selected button:selected {
 
 /*SNIPPETS ( IMPORTED )*/
 .glow-purple {
-    -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-    animation: neon6 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neon6 1.5s ease-in-out infinite alternate !important;
+    -moz-animation: neon6 1.5s ease-in-out infinite alternate !important;
+    animation: neon6 1.5s ease-in-out infinite alternate !important;
 }
 
 .glow-golden {

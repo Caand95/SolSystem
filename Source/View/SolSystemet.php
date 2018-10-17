@@ -24,6 +24,8 @@
 
  <!-- Snask -->
     <script>
+        var currentDestination = null;
+
         function PlanetOrbit(name, speed, distance, size) {
 
             var PlanetReference = document.getElementById(name);
@@ -56,6 +58,16 @@
             }, 16);
         }
 
+        function setDestination (targetDestination) {
+            console.log('Destination=%s', "" + targetDestination + "");
+            
+             if (currentDestination != null) {
+                $('#' + currentDestination).toggleClass('glow-box-purple');
+            }
+
+            $('#' + targetDestination).toggleClass('glow-box-purple');
+            currentDestination = targetDestination;
+        }
     </script>
 <section>
     <!-- View SideBar -->
@@ -66,8 +78,8 @@
 
         // Print nav-item HTML elementer & kald PlanetHover for hvert element
         foreach($ListofPlanets as $Planet){
-            echo"<div id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center align-items-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
-            echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"golden\");</script>\n";
+            echo"<div onclick=\"setDestination('$Planet->name');\" id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center align-items-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
+            echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"box-golden\");</script>\n";
         }
 
         // Kald PlanetHover for hvert nav-item element
@@ -92,6 +104,7 @@
             echo"<div ".
                 "id=\"$Planet->name\" ".
                 "class=\"element\"".
+                "onclick=\"setDestination('$Planet->name');\"".
                 "style=\"".
                     "Left:0;".
                     "Bottom:0;".
@@ -105,7 +118,7 @@
             }
             
             echo    "\"></div>\n";
-            
+                
             if($Planet->name != "Sol"){
                 /*Script for running the javascript*/
                 echo"<script>\n";
@@ -114,5 +127,8 @@
             }
         }
     ?>
+    </section>
+    <section class="element-rejs">
+        <button id="rejs-knap" />
     </section>
 </section>

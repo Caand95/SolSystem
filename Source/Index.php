@@ -33,7 +33,7 @@
 	   <a href="?page=Forside">
            <!--<img class="logo" src="Image/logo.png" />-->
            <h1 id="logo-text-h" class="logo-text">SolSystemet</h1> 
-           <script>HoverGlow("logo-text-h","logo-text-h","purple");</script>
+           <script>HoverGlow("logo-text-h","logo-text-h","text-purple");</script>
         </a>
         <!--Menu-->
         <!--<?php //include "./navbar.php"; ?>-->
