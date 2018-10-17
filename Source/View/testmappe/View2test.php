@@ -28,7 +28,7 @@ $list->Elements = json_decode(json_encode(GetTestInfo()), FALSE);
                 <?php echo $Entry->CelestialElementType; ?>...
             </a>
         </p>
-    </section>
+    </div>
 
     <section id="RandomFactWidget">
         <div id="RandomFactDude">

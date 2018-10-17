@@ -1,10 +1,7 @@
-<?php //REMOVE WHEN VIEW IS DONE
-    //include "./View/testmappe/view1.php";
-?>
 <?php require_once "./Scripts/LoadShowPlanets.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
 
-<!-- CSS - info fra php -->
+<!-- CSSnask - info fra php -->
 <style>
     <?php foreach($list->Elements as $Element) {
         echo "\n#".$Element->name."{\n";
@@ -24,7 +21,7 @@
 
 </style>
 
-<!-- Snask -->
+<!-- JSnask -->
 <script>
     var currentDestination = null;
 
@@ -117,7 +114,7 @@
 </script>
 
 <section>
-    <!-- View SideBar -->
+    <!-- View1 SideBar -->
     <section class="sidenav-nav d-flex flex-column align-items-center">
         <?php
         // sort på nested objects value (Planet->sunDistance)
@@ -135,7 +132,7 @@
         //}
         ?>
     </section>
-    <!-- View Content -->
+    <!-- View1 Content -->
     <section class="element-solsystem" style="">
         <div id="Sol" class="element" onclick="flyBy()"></div>
         <?php
