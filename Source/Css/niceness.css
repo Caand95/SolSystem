@@ -103,7 +103,7 @@ body {
     /*Static background*/
     background-size: cover;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 /*FOOTER*/
@@ -217,50 +217,111 @@ a:selected button:selected {
 
 /* ID */
 #sol {
-    Left: -30; 
-    Bottom: -30; 
-    Height: 60; 
-    Width: 60; 
+    Left: -30;
+    Bottom: -30;
+    Height: 60;
+    Width: 60;
     background-color: Orange;
     box-shadow: 0 0 10px orange,
-                0 0 60px orange,
-                0 0 200px yellow,
-                inset 0 0 80px yellow;
+        0 0 60px orange,
+        0 0 200px yellow,
+        inset 0 0 80px yellow;
 }
 
-#racket {
-    transform: rotate(90deg);
+#rejs-container {
+    position: fixed;
+    left: -100%;
+    /* right: 47.5%; */
+    display: flex;
+    z-index: 10;
+    bottom: 5%;
+}
+
+#rejs-racket {
     height: 75px;
     width: 75px;
-    z-index: 20;
-    position: fixed;
-    bottom: 5%;
-    left: 60%;
-    right: 40%;
-    display:none;
+    animation: racketfloat 2s ease-in-out infinite alternate;
+    -webkit-animation: racketfloat 2s ease-in-out infinite alternate;
+    -moz-animation: racketfloat 2s ease-in-out infinite alternate;
 }
 
-/* SNIPPETS ( IMPORTED ) */
-.glow-text-purple {
-    -webkit-animation: neonPtext 1.5s ease-in-out infinite alternate;
-    -moz-animation: neonPtext 1.5s ease-in-out infinite alternate;
-    animation: neonPtext 1.5s ease-in-out infinite alternate;
+#rejs-knap {
+    min-width: 7.75rem;
+    width: 100%;
+    /* height: 75%; */
+    /* min-height: 4.5rem; */
+    margin: 1rem;
 }
-.glow-text-golden {
-    -webkit-animation: neonGtext 1.5s ease-in-out infinite alternate;
-    -moz-animation: neonGtext 1.5s ease-in-out infinite alternate;
-    animation: neonGtext 1.5s ease-in-out infinite alternate;
+
+
+@-webkit-keyframes racketfloat {
+    from {
+        -webkit-transform: translateY(5px) rotate(90deg);
+    }
+
+    to {
+        -webkit-transform: translateY(-5px) rotate(90deg);
+    }
 }
+
+@-moz-keyframes racketfloat {
+    from {
+        -moz-transform: translateY(5px) rotate(90deg);
+    }
+
+    to {
+        -moz-transform: translateY(-5px) rotate(90deg);
+    }
+}
+
+@keyframes racketfloat {
+    from {
+        transform: translateY(5px) rotate(90deg);
+    }
+
+    to {
+        transform: translateY(-5px) rotate(90deg);
+    }
+}
+
+
+
+/*IMPORTET SNIPPETS*/
 
 .glow-box-purple {
     -webkit-animation: neonPBox 1.5s ease-in-out infinite alternate;
     -moz-animation: neonPBox 1.5s ease-in-out infinite alternate;
     animation: neonPBox 1.5s ease-in-out infinite alternate;
 }
+
+.glow-text-purple {
+    -webkit-animation: neonPText 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonPText 1.5s ease-in-out infinite alternate;
+    animation: neonPText 1.5s ease-in-out infinite alternate;
+}
+
 .glow-box-golden {
--webkit-animation: neonGBox 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neonGBox 1.5s ease-in-out infinite alternate;
     -moz-animation: neonGBox 1.5s ease-in-out infinite alternate;
     animation: neonGBox 1.5s ease-in-out infinite alternate;
+}
+
+.glow-text-golden {
+    -webkit-animation: neonGText 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonGText 1.5s ease-in-out infinite alternate;
+    animation: neonGText 1.5s ease-in-out infinite alternate;
+}
+
+.glow-box-white {
+    -webkit-animation: neonWBox 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonWBox 1.5s ease-in-out infinite alternate;
+    animation: neonWBox 1.5s ease-in-out infinite alternate;
+}
+
+.glow-text-white {
+    -webkit-animation: neonWText 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonWText 1.5s ease-in-out infinite alternate;
+    animation: neonWText 1.5s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes neonGBox {
@@ -384,5 +445,66 @@ a:selected button:selected {
 
     to {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+
+@-webkit-keyframes neonWBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ccc, 0 0 70px #ccc, 0 0 80px #ccc, 0 0 100px #ccc, 0 0 150px #ccc;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+}
+
+@-moz-keyframes neonWBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ccc, 0 0 70px #ccc, 0 0 80px #ccc, 0 0 100px #ccc, 0 0 150px #ccc;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+}
+
+@keyframes neonWBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ccc, 0 0 70px #ccc, 0 0 80px #ccc, 0 0 100px #ccc, 0 0 150px #ccc;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+}
+
+@-webkit-keyframes neonWText {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+
+    to {
+        text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ccc, 0 0 12.5px #ccc, 0 0 20px #ccc, 0 0 25px #ccc, 0 0 37.5px #ccc;
+    }
+}
+
+@-moz-keyframes neonWText {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+
+    to {
+        text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ccc, 0 0 12.5px #ccc, 0 0 20px #ccc, 0 0 25px #ccc, 0 0 37.5px #ccc;
+    }
+}
+
+@keyframes neonWText {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ccc, 0 0 35px #ccc, 0 0 40px #ccc, 0 0 50px #ccc, 0 0 75px #ccc;
+    }
+
+    to {
+        text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ccc, 0 0 12.5px #ccc, 0 0 20px #ccc, 0 0 25px #ccc, 0 0 37.px #ccc;
     }
 }
