@@ -63,13 +63,13 @@
             
             // Fjern forrige planet markering
              if (currentDestination != null) {
-                $('#sidenav-item-' + currentDestination).toggleClass('glow-box-purple');
-                $('#' + currentDestination).toggleClass('glow-box-purple');
+                $('#sidenav-item-' + currentDestination).toggleClass('glow-text-white');
+                $('#' + currentDestination).toggleClass('glow-box-white');
             }
 
             // Sæt ny planet markering
-            $('#sidenav-item-' + targetDestination).toggleClass('glow-box-purple');
-            $('#' + targetDestination).toggleClass('glow-box-purple');
+            $('#sidenav-item-' + targetDestination).toggleClass('glow-text-white');
+            $('#' + targetDestination).toggleClass('glow-box-white');
             
             // Opdater destination
             currentDestination = targetDestination;
