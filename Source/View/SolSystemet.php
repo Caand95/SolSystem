@@ -77,13 +77,18 @@
         currentDestination = targetDestination;
         $('#destination-tekst').text(currentDestination);
 
-        // Håndtér animation
-        /* $('#rejs-container').stop();
-        var width = $('#rejs-container').width();
-        $('#rejs-container').css('left', '-' + width);
+        // Stop evt. anden animation & flyt '#rejs-container' bag sidenav
+        var rejsContainer = $('#rejs-container');
+        rejsContainer.stop();
+        var rejsWidth = rejsContainer.width();
+        var navWidth = $('.sidenav-nav').width();
+        rejsContainer.css('left', (navWidth - rejsWidth) + 'px');
+
+        // Animation: flyv mod midten af skærmen
+        var endLeft = ($('.main').width() - navWidth + rejsWidth) / 2;
         $('#rejs-container').animate({
-            left: 60%
-        }, 1500); */
+            left: '+=' + endLeft + 'px'
+        }, 900, 'linear');
     }
 
 </script>
