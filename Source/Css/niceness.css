@@ -191,23 +191,11 @@ body {
     border-radius: 500px;
 }
 
-#sol {
-    Left: -30; 
-    Bottom: -30; 
-    Height: 60; 
-    Width: 60; 
-    background-color: Orange;
-    box-shadow: 0 0 10px orange,
-                0 0 60px orange,
-                0 0 200px yellow,
-                inset 0 0 80px yellow;
-}
+/** View 2 **/
 
-/**View2**/
+/** View 3 **/
 
-/**View3**/
-
-/*TAGS*/
+/* TAGS */
 a,
 a button {
     text-decoration: none !important;
@@ -227,12 +215,32 @@ a:selected button:selected {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
-/*ID*/
+/* ID */
+#sol {
+    Left: -30; 
+    Bottom: -30; 
+    Height: 60; 
+    Width: 60; 
+    background-color: Orange;
+    box-shadow: 0 0 10px orange,
+                0 0 60px orange,
+                0 0 200px yellow,
+                inset 0 0 80px yellow;
+}
 
+#racket {
+    transform: rotate(90deg);
+    height: 75px;
+    width: 75px;
+    z-index: 20;
+    position: fixed;
+    bottom: 5%;
+    left: 60%;
+    right: 40%;
+    display:none;
+}
 
-
-
-/*SNIPPETS ( IMPORTED )*/
+/* SNIPPETS ( IMPORTED ) */
 .glow-text-purple {
     -webkit-animation: neonPtext 1.5s ease-in-out infinite alternate;
     -moz-animation: neonPtext 1.5s ease-in-out infinite alternate;
