@@ -18,72 +18,75 @@
         }
 
         echo "}";
-    }?>
+    }
+
+    ?>
 
 </style>
 
- <!-- Snask -->
-    <script>
-        var currentDestination = null;
+<!-- Snask -->
+<script>
+    var currentDestination = null;
 
-        function PlanetOrbit(name, speed, distance, size) {
+    function PlanetOrbit(name, speed, distance, size) {
 
-            var PlanetReference = document.getElementById(name);
-            var Reference = document.getElementById("Sol");
+        var PlanetReference = document.getElementById(name);
+        var Reference = document.getElementById("Sol");
 
-            var Planet = {
-                r: distance + size / 2,
-                a: (Math.random() * 5),
-                x: 0,
-                y: 0,
-                s: (speed * 0.001)
-            }
-
-            setInterval(function() {
-
-                Planet.x = Math.cos(Planet.a) * Planet.r;
-                Planet.y = Math.sin(Planet.a) * Planet.r;
-
-                Planet.a += Planet.s;
-                //PlanetPoint.x += PlanetPoint.d;
-                //PlanetPoint.y += PlanetPoint.d;
-
-                PlanetReference.style.left = Planet.x;
-                PlanetReference.style.bottom = Planet.y;
-
-                Planet.a += Planet.s;
-
-                //console.log('Name=%s, Angle=%d, x=%s, y=%s', name, Planet.a * 1000, "" + Planet.x + "", "" + Planet.y + "");
-
-            }, 16);
+        var Planet = {
+            r: distance + size / 2,
+            a: (Math.random() * 5),
+            x: 0,
+            y: 0,
+            s: (speed * 0.001)
         }
 
-        function setDestination (targetDestination) {
-            console.log('Destination=%s', "" + targetDestination + "");
-            
-            // Fjern forrige planet markering
-             if (currentDestination != null) {
-                $('#sidenav-item-' + currentDestination).toggleClass('glow-text-white');
-                $('#' + currentDestination).toggleClass('glow-box-white');
-            }
+        setInterval(function() {
 
-            // Sæt ny planet markering
-            $('#sidenav-item-' + targetDestination).toggleClass('glow-text-white');
-            $('#' + targetDestination).toggleClass('glow-box-white');
-            
-            // Opdater destination
-            currentDestination = targetDestination;
-            $('#destination-tekst').text(currentDestination);
+            Planet.x = Math.cos(Planet.a) * Planet.r;
+            Planet.y = Math.sin(Planet.a) * Planet.r;
 
-            // Håndtér animation
-            $('#rejs-container').stop();
-            var width = $('#rejs-container').width();
-            $('#rejs-container').css('left', '-' + width);
-            $('#rejs-container').animate({
-                left: 60%
-            }, 1500);
+            Planet.a += Planet.s;
+            //PlanetPoint.x += PlanetPoint.d;
+            //PlanetPoint.y += PlanetPoint.d;
+
+            PlanetReference.style.left = Planet.x;
+            PlanetReference.style.bottom = Planet.y;
+
+            Planet.a += Planet.s;
+
+            //console.log('Name=%s, Angle=%d, x=%s, y=%s', name, Planet.a * 1000, "" + Planet.x + "", "" + Planet.y + "");
+
+        }, 16);
+    }
+
+    function setDestination(targetDestination) {
+        console.log('Destination=%s', "" + targetDestination + "");
+
+        // Fjern forrige planet markering
+        if (currentDestination != null) {
+            $('#sidenav-item-' + currentDestination).toggleClass('glow-text-white');
+            $('#' + currentDestination).toggleClass('glow-box-white');
         }
-    </script>
+
+        // Sæt ny planet markering
+        $('#sidenav-item-' + targetDestination).toggleClass('glow-text-white');
+        $('#' + targetDestination).toggleClass('glow-box-white');
+
+        // Opdater destination
+        currentDestination = targetDestination;
+        $('#destination-tekst').text(currentDestination);
+
+        // Håndtér animation
+        /* $('#rejs-container').stop();
+        var width = $('#rejs-container').width();
+        $('#rejs-container').css('left', '-' + width);
+        $('#rejs-container').animate({
+            left: 60%
+        }, 1500); */
+    }
+
+</script>
 <section>
     <!-- View SideBar -->
     <section class="sidenav-nav d-flex flex-column align-items-center">
@@ -103,10 +106,10 @@
         //}
         ?>
     </section>
-<!-- View Content -->
+    <!-- View Content -->
     <section class="element-solsystem" style="">
         <div id="Sol" class="element"></div>
- <?php
+        <?php
     
         foreach($ListofShowPlanets->Elements as $Planet){
             /*PlanetConfig*/
@@ -144,8 +147,10 @@
         }
     ?>
     </section>
-    <section class="element-rejs">
-        <button id="rejs-knap">Rejs til <span id="destination-tekst">PLANET NAVN</span>!</button>
-        <img id="racket" src="./Image/Racket.png" />
+    <section id="rejs-container">
+        <button class="btn btn-secondary" id="rejs-knap">
+            Rejs til <span id="destination-tekst"></span>!
+        </button>
+        <img id="rejs-racket" src="./Image/Racket.png" />
     </section>
 </section>
