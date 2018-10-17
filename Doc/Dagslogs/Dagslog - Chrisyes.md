@@ -57,13 +57,24 @@ Jeg kiggede også på noget mere PHP og JavaScript for at kunne være med til no
 
 Dag 4
 
+Vi arbejdede videre med projektet.
+
 #############################################################################
 
 Dag 5
 
+Vi har samlet gruppen hen mod dagen for at få et bedre samarbejde og bedre kommunikation. Der er nogle enkelte krav vi har overset, som vi samler op på lidt nu her og i morgen.
+
+Der har været lidt konflikt i gruppen pga. forskellige holdninger, så jeg håber på at gruppen kan fokusere på arbejdet fremadrettet og vedligeholde kommunikationen.
+
 #############################################################################
 
 Dag 6
+
+Planen for i dag er at sikre at Casper har fået sat HTTPS op på sin computer (Mig og Dan satte vores op i går). 
+Hvis ikke er det, det første vi gør.
+
+Derefter går vi efter at opfylde kravene før vi går i gang igen med design.
 
 #############################################################################
 
