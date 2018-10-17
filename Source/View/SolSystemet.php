@@ -74,6 +74,14 @@
             // Opdater destination
             currentDestination = targetDestination;
             $('#destination-tekst').text(currentDestination);
+
+            // Håndtér animation
+            $('#rejs-container').stop();
+            var width = $('#rejs-container').width();
+            $('#rejs-container').css('left', '-' + width);
+            $('#rejs-container').animate({
+                left: 60%
+            }, 1500);
         }
     </script>
 <section>
