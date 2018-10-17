@@ -230,7 +230,7 @@ a:selected button:selected {
 
 #rejs-container {
     position: fixed;
-    left: 52.5%;
+    left: -100%;
     /* right: 47.5%; */
     display: flex;
     z-index: 10;

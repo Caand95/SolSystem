@@ -88,7 +88,10 @@
         var endLeft = ($('.main').width() - navWidth + rejsWidth) / 2;
         $('#rejs-container').animate({
             left: '+=' + endLeft + 'px'
-        }, 900, 'linear');
+        }, {
+            duration: 1500, 
+            easing: 'easeOutBack' /* easeOutBack easeOutElastic */
+        }); 
     }
 
 </script>
