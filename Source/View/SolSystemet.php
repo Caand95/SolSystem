@@ -77,6 +77,10 @@
         currentDestination = targetDestination;
         $('#destination-tekst').text(currentDestination);
 
+        flyRocket();
+    }
+
+    function flyRocket(flyBy = false) {
         // Stop evt. anden animation & flyt '#rejs-container' bag sidenav
         var rejsContainer = $('#rejs-container');
         rejsContainer.stop();
@@ -84,10 +88,17 @@
         var navWidth = $('.sidenav-nav').width();
         rejsContainer.css('left', (navWidth - rejsWidth) + 'px');
 
-        // Animation: flyv mod midten af skærmen
+        // Animation: flyv mod midten af skærmen eller flyv forbi
         var solarWidth = $('.main').width() - navWidth;
-        var rejsWidth = rejsWidth + ($('#rejs-knap').width() / 2); /*($('#rejs-racket').width() / 2);*/
-        var endLeft = (solarWidth + rejsWidth) / 2;
+        var endLeft;
+
+        if (flyBy) {
+            endLeft = solarWidth + rejsWidth;
+        } else {
+            var rejsWidth = rejsWidth + ($('#rejs-knap').width() / 2); /*($('#rejs-racket').width() / 2);*/
+            endLeft = (solarWidth + rejsWidth) / 2;
+        }
+
         $('#rejs-container').animate({
             left: '+=' + endLeft + 'px'
         }, {
@@ -98,6 +109,10 @@
 
     function navigate() {
         window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
+    }
+
+    function flyBy() {
+        flyRocket(true);
     }
 </script>
 
@@ -122,7 +137,7 @@
     </section>
     <!-- View Content -->
     <section class="element-solsystem" style="">
-        <div id="Sol" class="element"></div>
+        <div id="Sol" class="element" onclick="flyBy()"></div>
         <?php
     
         foreach($ListofShowPlanets->Elements as $Planet){
