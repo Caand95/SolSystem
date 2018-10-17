@@ -253,6 +253,9 @@ a:selected button:selected {
     /* height: 75%; */
     /* min-height: 4.5rem; */
     margin: 1rem;
+    animation: float-down-up 2s ease-in-out infinite alternate;
+    -webkit-animation: float-down-up 2s ease-in-out infinite alternate;
+    -moz-animation: float-down-up 2s ease-in-out infinite alternate;
 }
 
 
@@ -286,9 +289,37 @@ a:selected button:selected {
     }
 }
 
+@-webkit-keyframes float-down-up {
+    from {
+        -webkit-transform: translateY(-2px);
+    }
 
+    to {
+        -webkit-transform: translateY(2px);
+    }
+}
 
-/*IMPORTET SNIPPETS*/
+@-moz-keyframes float-down-up {
+    from {
+        -moz-transform: translateY(-2px);
+    }
+
+    to {
+        -moz-transform: translateY(2px);
+    }
+}
+
+@keyframes float-down-up {
+    from {
+        transform: translateY(-2px);
+    }
+
+    to {
+        transform: translateY(2px);
+    }
+}
+
+/* IMPORTEREDE SNIPPETS */
 
 .glow-box-purple {
     -webkit-animation: neonPBox 1.5s ease-in-out infinite alternate;
