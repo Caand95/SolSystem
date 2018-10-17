@@ -51,7 +51,7 @@
             //PlanetPoint.y += PlanetPoint.d;
 
             PlanetReference.style.left = Planet.x;
-            PlanetReference.style.bottom = Planet.y;
+            PlanetReference.style.bottom = Planet.y/1.4;
 
             Planet.a += Planet.s;
 
@@ -100,6 +100,7 @@
         window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
     }
 </script>
+
 <section>
     <!-- View SideBar -->
     <section class="sidenav-nav d-flex flex-column align-items-center">
