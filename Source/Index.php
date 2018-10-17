@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<title>SolSytemet</title>
-		<meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Css -->
         <link rel="stylesheet" type="text/css" href="Css/niceness.css">
