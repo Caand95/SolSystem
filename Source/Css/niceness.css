@@ -138,9 +138,9 @@ body {
     /*height: 100%;*/
     /*margin: 2.5% 0;*/
     /*overflow: hidden;*/
-    background-color: #0e1118;
+    background-color: #1e2639;
 
-    box-shadow: 0 2px 10px 0 #0e1118, 0 2px 10px 0 #0e111880;
+    box-shadow: 0 2px 10px 0 #1e2639, 0 2px 10px 0 #1e26398c;
     min-width: 16rem;
     max-width: 15%;
     position: absolute;
@@ -180,21 +180,22 @@ body {
     position: absolute;
     top: 50%;
     bottom: 50%;
-    left: 50%;
-    right: 50%;
+    left: 57.5%;
+    right: 42.5%;
 }
 
 .element {
     position: absolute;
-    border: solid 0px transparent !important;
+    /*border: solid 0px transparent !important;*/
+    border: solid 1px transparent !important;
     border-radius: 500px;
 }
 
-/**View2**/
+/** View 2 **/
 
-/**View3**/
+/** View 3 **/
 
-/*TAGS*/
+/* TAGS */
 a,
 a button {
     text-decoration: none !important;
@@ -214,25 +215,55 @@ a:selected button:selected {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
-/*ID*/
-
-
-
-
-/*SNIPPETS ( IMPORTED )*/
-.glow-purple {
-    -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-    animation: neon6 1.5s ease-in-out infinite alternate;
+/* ID */
+#sol {
+    Left: -30; 
+    Bottom: -30; 
+    Height: 60; 
+    Width: 60; 
+    background-color: Orange;
+    box-shadow: 0 0 10px orange,
+                0 0 60px orange,
+                0 0 200px yellow,
+                inset 0 0 80px yellow;
 }
 
-.glow-golden {
-    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon5 1.5s ease-in-out infinite alternate;
-    animation: neon5 1.5s ease-in-out infinite alternate;
+#racket {
+    transform: rotate(90deg);
+    height: 75px;
+    width: 75px;
+    z-index: 20;
+    position: fixed;
+    bottom: 5%;
+    left: 60%;
+    right: 40%;
+    display:none;
 }
 
-@-webkit-keyframes neon5 {
+/* SNIPPETS ( IMPORTED ) */
+.glow-text-purple {
+    -webkit-animation: neonPtext 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonPtext 1.5s ease-in-out infinite alternate;
+    animation: neonPtext 1.5s ease-in-out infinite alternate;
+}
+.glow-text-golden {
+    -webkit-animation: neonGtext 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonGtext 1.5s ease-in-out infinite alternate;
+    animation: neonGtext 1.5s ease-in-out infinite alternate;
+}
+
+.glow-box-purple {
+    -webkit-animation: neonPBox 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonPBox 1.5s ease-in-out infinite alternate;
+    animation: neonPBox 1.5s ease-in-out infinite alternate;
+}
+.glow-box-golden {
+-webkit-animation: neonGBox 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonGBox 1.5s ease-in-out infinite alternate;
+    animation: neonGBox 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neonGBox {
     from {
         box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
     }
@@ -243,7 +274,7 @@ a:selected button:selected {
 }
 
 
-@-moz-keyframes neon5 {
+@-moz-keyframes neonGBox {
     from {
         box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
     }
@@ -253,7 +284,7 @@ a:selected button:selected {
     }
 }
 
-@keyframes neon5 {
+@keyframes neonGBox {
     from {
         box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
     }
@@ -263,7 +294,70 @@ a:selected button:selected {
     }
 }
 
-@-webkit-keyframes neon6 {
+
+@-webkit-keyframes neonGText {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+
+@-moz-keyframes neonGText {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+@keyframes neonGText {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+
+@-webkit-keyframes neonPBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+@-moz-keyframes neonPBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+@keyframes neonPBox {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+@-webkit-keyframes neonPText {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
     }
@@ -273,7 +367,7 @@ a:selected button:selected {
     }
 }
 
-@-moz-keyframes neon6 {
+@-moz-keyframes neonPText {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
     }
@@ -283,7 +377,7 @@ a:selected button:selected {
     }
 }
 
-@keyframes neon6 {
+@keyframes neonPText {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
     }

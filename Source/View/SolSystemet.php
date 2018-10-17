@@ -6,20 +6,6 @@
 
 <!-- CSS - info fra php -->
 <style>
-    .element-solsystem {
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        right: 50%;
-    }
-
-    .element {
-        position: absolute;
-        border: solid 1px transparent !important;
-        border-radius: 500px;
-    }
-
     <?php foreach($list->Elements as $Element) {
         echo "\n#".$Element->name."{\n";
         echo "Height:".($Element->size).";\n";
@@ -38,6 +24,8 @@
 
  <!-- Snask -->
     <script>
+        var currentDestination = null;
+
         function PlanetOrbit(name, speed, distance, size) {
 
             var PlanetReference = document.getElementById(name);
@@ -70,6 +58,23 @@
             }, 16);
         }
 
+        function setDestination (targetDestination) {
+            console.log('Destination=%s', "" + targetDestination + "");
+            
+            // Fjern forrige planet markering
+             if (currentDestination != null) {
+                $('#sidenav-item-' + currentDestination).toggleClass('glow-box-purple');
+                $('#' + currentDestination).toggleClass('glow-box-purple');
+            }
+
+            // Sæt ny planet markering
+            $('#sidenav-item-' + targetDestination).toggleClass('glow-box-purple');
+            $('#' + targetDestination).toggleClass('glow-box-purple');
+            
+            // Opdater destination
+            currentDestination = targetDestination;
+            $('#destination-tekst').text(currentDestination);
+        }
     </script>
 <section>
     <!-- View SideBar -->
@@ -80,8 +85,8 @@
 
         // Print nav-item HTML elementer & kald PlanetHover for hvert element
         foreach($ListofPlanets as $Planet){
-            echo"<div id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center align-items-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
-            echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"golden\");</script>\n";
+            echo"<div onclick=\"setDestination('$Planet->name');\" id=\"sidenav-item-$Planet->name\" class=\"sidenav-item d-flex justify-content-center align-items-center\" style=\"border: solid 2px $Planet->hexColor;background:".$Planet->hexColor."75;color:$Planet->hexColor !important\">$Planet->name</div>\n";
+            echo"<script>HoverGlow(\"sidenav-item-$Planet->name\", \"$Planet->name\", \"box-golden\");</script>\n";
         }
 
         // Kald PlanetHover for hvert nav-item element
@@ -92,7 +97,7 @@
     </section>
 <!-- View Content -->
     <section class="element-solsystem" style="">
-        <div id="Sol" class=element style="Left:-30; Bottom:-30; Height:60; Width:60; background-color:Orange;"></div>
+        <div id="Sol" class="element"></div>
  <?php
     
         foreach($ListofShowPlanets->Elements as $Planet){
@@ -106,6 +111,7 @@
             echo"<div ".
                 "id=\"$Planet->name\" ".
                 "class=\"element\"".
+                "onclick=\"setDestination('$Planet->name');\"".
                 "style=\"".
                     "Left:0;".
                     "Bottom:0;".
@@ -119,14 +125,19 @@
             }
             
             echo    "\"></div>\n";
-            
+                
             if($Planet->name != "Sol"){
                 /*Script for running the javascript*/
                 echo"<script>\n";
-                echo"PlanetOrbit(\"$Planet->name\", $Planet->speed, $Planet->distance,$Planet->radius)\n";
+                echo"PlanetOrbit(\"$Planet->name\", $Planet->speed, $Planet->distance,$Planet->radius);\n";
+                echo"HoverGlow(\"$Planet->name\", \"$Planet->name\", \"box-golden\");\n";
                 echo"</script>\n";
             }
         }
     ?>
+    </section>
+    <section class="element-rejs">
+        <button id="rejs-knap">Rejs til <span id="destination-tekst">PLANET NAVN</span>!</button>
+        <img id="racket" src="./Image/Racket.png" />
     </section>
 </section>
