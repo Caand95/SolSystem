@@ -51,7 +51,7 @@
             //PlanetPoint.y += PlanetPoint.d;
 
             PlanetReference.style.left = Planet.x;
-            PlanetReference.style.bottom = Planet.y;
+            PlanetReference.style.bottom = Planet.y/1.4;
 
             Planet.a += Planet.s;
 

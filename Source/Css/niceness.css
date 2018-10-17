@@ -219,10 +219,10 @@ a:selected button:selected {
 
 /* ID */
 #sol {
-    Left: -30;
-    Bottom: -30;
-    Height: 60;
-    Width: 60;
+    Left: -25;
+    Bottom: -25;
+    Height: 50;
+    Width: 50;
     background-color: Orange;
     box-shadow: 0 0 10px orange,
         0 0 60px orange,
