@@ -61,12 +61,19 @@
         function setDestination (targetDestination) {
             console.log('Destination=%s', "" + targetDestination + "");
             
+            // Fjern forrige planet markering
              if (currentDestination != null) {
+                $('#sidenav-item-' + currentDestination).toggleClass('glow-box-purple');
                 $('#' + currentDestination).toggleClass('glow-box-purple');
             }
 
+            // Sæt ny planet markering
+            $('#sidenav-item-' + targetDestination).toggleClass('glow-box-purple');
             $('#' + targetDestination).toggleClass('glow-box-purple');
+            
+            // Opdater destination
             currentDestination = targetDestination;
+            $('#destination-tekst').text(currentDestination);
         }
     </script>
 <section>
@@ -122,13 +129,15 @@
             if($Planet->name != "Sol"){
                 /*Script for running the javascript*/
                 echo"<script>\n";
-                echo"PlanetOrbit(\"$Planet->name\", $Planet->speed, $Planet->distance,$Planet->radius)\n";
+                echo"PlanetOrbit(\"$Planet->name\", $Planet->speed, $Planet->distance,$Planet->radius);\n";
+                echo"HoverGlow(\"$Planet->name\", \"$Planet->name\", \"box-golden\");\n";
                 echo"</script>\n";
             }
         }
     ?>
     </section>
     <section class="element-rejs">
-        <button id="rejs-knap" />
+        <button id="rejs-knap">Rejs til <span id="destination-tekst">PLANET NAVN</span>!</button>
+        <img id="racket" src="./Image/Racket.png" />
     </section>
 </section>
