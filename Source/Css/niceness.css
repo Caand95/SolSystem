@@ -240,7 +240,6 @@ a:selected button:selected {
     display:none;
 }
 
-/* SNIPPETS ( IMPORTED ) */
 .glow-box-purple {
     -webkit-animation: neonPBox 1.5s ease-in-out infinite alternate;
     -moz-animation: neonPBox 1.5s ease-in-out infinite alternate;
