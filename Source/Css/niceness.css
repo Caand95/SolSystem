@@ -242,14 +242,14 @@ a:selected button:selected {
 
 /* SNIPPETS ( IMPORTED ) */
 .glow-text-purple {
-    -webkit-animation: neonPtext 1.5s ease-in-out infinite alternate;
-    -moz-animation: neonPtext 1.5s ease-in-out infinite alternate;
-    animation: neonPtext 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neonPText 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonPText 1.5s ease-in-out infinite alternate;
+    animation: neonPText 1.5s ease-in-out infinite alternate;
 }
 .glow-text-golden {
-    -webkit-animation: neonGtext 1.5s ease-in-out infinite alternate;
-    -moz-animation: neonGtext 1.5s ease-in-out infinite alternate;
-    animation: neonGtext 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neonGText 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonGText 1.5s ease-in-out infinite alternate;
+    animation: neonGText 1.5s ease-in-out infinite alternate;
 }
 
 .glow-box-purple {
