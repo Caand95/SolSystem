@@ -92,6 +92,7 @@
     }
 
 </script>
+
 <section>
     <!-- View SideBar -->
     <section class="sidenav-nav d-flex flex-column align-items-center">

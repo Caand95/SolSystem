@@ -3,7 +3,7 @@
 		<title>SolSytemet</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="icon" href="Image/Racket.png">
 		<!-- Css -->
         <link rel="stylesheet" type="text/css" href="Css/niceness.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -32,7 +32,7 @@
 	<header class="header">
 	   <a href="?page=Forside">
            <!--<img class="logo" src="Image/logo.png" />-->
-           <h1 id="logo-text-h" class="logo-text">SolSystemet</h1> 
+            <h1 id="logo-text-h" class="logo-text">SolSystemet</h1> 
            <script>HoverGlow("logo-text-h","logo-text-h","text-purple");</script>
         </a>
         <!--Menu-->
