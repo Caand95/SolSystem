@@ -129,6 +129,7 @@
     ?>
     </section>
     <section class="element-rejs">
-        <button id="rejs-knap" />
+        <button id="rejs-knap"></button>
+        <img id="racket" src="./image/racket.png" />
     </section>
 </section>

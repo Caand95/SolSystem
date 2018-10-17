@@ -228,7 +228,17 @@ a:selected button:selected {
 }
 
 /*ID*/
-
+#racket{
+    transform: rotate(90deg);
+    height: 75px;
+    width: 75px;
+    z-index: 20;
+    position: fixed;
+    bottom: 5%;
+    left: 60%;
+    right: 40%;
+    display:none;
+}
 
 
 
