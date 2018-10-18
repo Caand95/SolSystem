@@ -194,7 +194,33 @@ body {
 }
 
 /** View 2 **/
-
+.spinninPlanet-Container{
+    top:0%;
+    max-height: 50%;
+    height: 50%;
+}
+.spinninPlanet-planet{
+    /*Spinnin effect*/
+    height: inherit;
+    max-height: 50%;
+}
+.spinninPlanet-planet-img{
+    max-height: 80%;
+    height: inherit;
+}
+.planetInfo-container{
+    bottom:0%;
+    max-height: 50%;
+    min-height: 10%;
+}
+.planetInfo-infoBox{
+    Border: 1px solid darkslategray;
+    bottom: 5%;
+    background-color: darkslategrey;
+    border-radius: 5px;
+}
+.planetInfo-header{}
+.planetInfo-info{}
 /** View 3 **/
 
 /* TAGS */

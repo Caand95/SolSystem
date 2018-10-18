@@ -32,6 +32,31 @@ CREATE TABLE Planet (
 ​    FOREIGN KEY (PlanetType) REFERENCES PlanetType(Name)
 );
 
+create table Planetfacts(
+    ID int(10) auto_increment,
+    Name varchar(100),
+    Fact varchar(1000),
+    primary key(ID),
+    foreign key (Name) references Planet(Name)
+);
+
+create procedure GetPlanetFacts()
+    select * from Planetfacts;
+
+delimiter //
+Create procedure GetPlanetFactByName(In PlanetName varchar(100))
+    begin
+        select * from PlanetFacts where name = planetName
+    end //
+delimiter ;
+
+delimiter //
+create procedure GetPlanetFactByID(in FactID int(10))
+    begin
+        select * from PlanetFacts where id =FactID
+    end //
+delimiter ;
+
 CREATE PROCEDURE GetPlanets()
 ​	SELECT * FROM Planet;
 

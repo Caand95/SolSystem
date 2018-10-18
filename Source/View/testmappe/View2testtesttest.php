@@ -3,9 +3,9 @@
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
 <?php //Snask ?>
 <?php $selectedPlanet="";if(isset($_GET['planet'])) { if(!empty($_GET['planet'])) { $selectedPlanet = $_GET['planet']; } } ?>
-<?php if(!in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
+<?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
 
-<section class="spinninPlanet-Container">
+<section class="spinninPlanet-Container d-flex justify-content-center align-items-center">
     <div id="spinninPlanet-planet">
          <img id="spinninPlanet-planet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
     </div>
