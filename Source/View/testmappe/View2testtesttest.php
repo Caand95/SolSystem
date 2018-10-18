@@ -23,7 +23,7 @@ $jsontmp = json_encode($planetFacts, false);
 
 <script>
     var facts = JSON.parse('<?php print_r($jsontmp);?>');
-    var currentFactNumber = 0;
+    var currentFactNumber = 1;
     function DisplayFact(){
         var textframe = document.getElementById('Planet-Facts-Box-Text');
         currentFactNumber++;
@@ -46,7 +46,7 @@ $jsontmp = json_encode($planetFacts, false);
     </div>
     <div class="Planet-Facts">
         <div class="Planet-Facts-Box sveav-ani-rev">
-            <span id="Planet-Facts-Box-Text"></span>
+            <span id="Planet-Facts-Box-Text"><?php echo json_decode($jsontmp)[1]->fact;?></span>
             <button class="btn btn-secondary Planet-Facts-Box-Btn" onclick="DisplayFact()">Næste Fakta!</button>
             <div class="speech-bubble-ds-arrow"></div>
         </div>

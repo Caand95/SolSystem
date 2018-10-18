@@ -233,9 +233,10 @@ body {
     height: fit-content;
     max-height: 35%;
     min-height: 15%;
-    width: 100%;
+    width: 90%;
     margin-top: 17%;
     margin-bottom: 3%;
+    margin-left: 5%;
     background: #efefef;
     border: 1px solid #a7a7a7;
     -webkit-border-radius: 4px;
@@ -246,7 +247,7 @@ body {
     position: relative;
     z-index: 5;
 }
-    
+
 .Planet-Facts-Box-Btn {
     position: absolute;
     bottom: 5%;
@@ -336,8 +337,9 @@ a:selected button:selected {
         0 0 200px yellow,
         inset 0 0 80px yellow;
 }
-#Planet-Facts-Box-Text{
-}
+
+#Planet-Facts-Box-Text {}
+
 #rejs-container {
     position: fixed;
     left: -100%;
