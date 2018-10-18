@@ -96,7 +96,7 @@
             endLeft = (solarWidth + rejsWidth) / 2;
         }
 
-        $('#rejs-container').animate({
+        rejsContainer.animate({
             left: '+=' + endLeft + 'px'
         }, {
             duration: 1500, 
@@ -105,7 +105,15 @@
     }
 
     function navigate() {
-        window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
+        $('#rejs-container').animate({
+            left: '+=' + $('.main').width() + 'px'
+        }, {
+            duration: 1000, 
+            easing: 'easeInBack',
+            complete: function() {
+                window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
+            }
+        });
     }
 
     function flyBy() {

@@ -46,9 +46,20 @@ $jsontmp = json_encode($planetFacts, false);
     $(document).ready(function() {
         DisplayFact();
     });
-</script>
 
-    
+    function GoBack() {
+        $('#rejs-container-rev').animate({
+            left: '-=' + $('.main').width() + 'px'
+        }, {
+            duration: 1000, 
+            easing: 'easeInBack',
+            complete: function() {
+                window.location.href = "?page=";
+            }
+        });
+    }
+</script>
+ 
 <section class="Planet-container">
     <div class="Planet-spinninPlanet">
         <img class="Planet-spinninPlanet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
@@ -62,11 +73,6 @@ $jsontmp = json_encode($planetFacts, false);
         <img class="Planet-Facts-astro sveav-ani" src="./image/astronaut.png" />
     </div>
 </section>
-<script>
-    function GoBack() {
-        window.location.href = "?page=";
-    }
-</script>
 <section id="rejs-container-rev">
     <img id="rejs-racket-back" src="./Image/Racket-rev.png" />
     <button class="btn btn-secondary" id="rejs-knap" onclick="GoBack()">
