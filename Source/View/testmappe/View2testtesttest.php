@@ -1,8 +1,8 @@
 <?php //IMPORT ?>
 <?php require_once "./Scripts/LoadCelestialElements.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
-<?php //Snask ?>
-<?php   $selectedPlanet="";
+<?php 
+$selectedPlanet="";
     
 if(isset($_GET['planet'])) { 
     if(!empty($_GET['planet'])) { 
@@ -15,7 +15,18 @@ if(isset($_GET['planet'])) {
             }
         }
     }
-} ?>
+}
+
+$planetFacts = $PlanetController->getPlanetFacts($selectedPlanet);
+echo "<script>\n";
+echo "var facts = JSON.parse(\"" . json_encode($planetFacts, JSON_FORCE_OBJECT) . "\");\n";
+echo "/*";
+//$json = json_encode($planetFacts[0]->planetName, false);
+// echo $json;
+// echo json_encode($planetFacts, JSON_FORCE_OBJECT);
+echo "*/\n";
+echo "</script>\n";
+?>
     
 <section class="Planet-container">
     <div class="Planet-spinninPlanet">
