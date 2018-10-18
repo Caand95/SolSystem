@@ -8,7 +8,17 @@
         if(!empty($_GET['planet'])) { 
             $selectedPlanet = $_GET['planet'];
         } 
-    } 
+    }
+
+        /*Script for running the javascript*/
+        $planetFacts = $PlanetController->getPlanetFacts($selectedPlanet);
+        echo "<script>\n";
+        //echo "var facts = JSON.parse(\"" . json_encode($planetFacts, JSON_FORCE_OBJECT) . "\");\n";
+        echo "/*";
+        // var_dump($planetFacts);
+        echo json_encode($planetFacts, JSON_FORCE_OBJECT);
+        echo "*/\n";
+        echo "</script>\n";
 ?>
 <?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
 
