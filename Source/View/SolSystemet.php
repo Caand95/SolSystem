@@ -1,10 +1,7 @@
-<?php //REMOVE WHEN VIEW IS DONE
-    //include "./View/testmappe/view1.php";
-?>
 <?php require_once "./Scripts/LoadShowPlanets.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
 
-<!-- CSS - info fra php -->
+<!-- CSSnask - info fra php -->
 <style>
     <?php foreach($list->Elements as $Element) {
         echo "\n#".$Element->name."{\n";
@@ -24,7 +21,7 @@
 
 </style>
 
-<!-- Snask -->
+<!-- JSnask -->
 <script>
     var currentDestination = null;
 
@@ -51,7 +48,7 @@
             //PlanetPoint.y += PlanetPoint.d;
 
             PlanetReference.style.left = Planet.x;
-            PlanetReference.style.bottom = Planet.y;
+            PlanetReference.style.bottom = Planet.y/1.4;
 
             Planet.a += Planet.s;
 
@@ -77,6 +74,10 @@
         currentDestination = targetDestination;
         $('#destination-tekst').text(currentDestination);
 
+        flyRocket();
+    }
+
+    function flyRocket(flyBy = false) {
         // Stop evt. anden animation & flyt '#rejs-container' bag sidenav
         var rejsContainer = $('#rejs-container');
         rejsContainer.stop();
@@ -84,22 +85,36 @@
         var navWidth = $('.sidenav-nav').width();
         rejsContainer.css('left', (navWidth - rejsWidth) + 'px');
 
-        // Animation: flyv mod midten af skærmen
-        var endLeft = ($('.main').width() - navWidth + rejsWidth) / 2;
+        // Animation: flyv mod midten af skærmen eller flyv forbi
+        var solarWidth = $('.main').width() - navWidth;
+        var endLeft;
+
+        if (flyBy) {
+            endLeft = solarWidth + rejsWidth;
+        } else {
+            var rejsWidth = rejsWidth + ($('#rejs-knap').width() / 2); /*($('#rejs-racket').width() / 2);*/
+            endLeft = (solarWidth + rejsWidth) / 2;
+        }
+
         $('#rejs-container').animate({
             left: '+=' + endLeft + 'px'
         }, {
             duration: 1500, 
-            easing: 'easeOutBack' /* easeOutBack easeOutElastic */
-        }); 
+            easing: 'easeOutBack'
+        });
     }
 
     function navigate() {
         window.location.href = "?page=PlanetInfo&planet=" + currentDestination;
     }
+
+    function flyBy() {
+        flyRocket(true);
+    }
 </script>
+
 <section>
-    <!-- View SideBar -->
+    <!-- View1 SideBar -->
     <section class="sidenav-nav d-flex flex-column align-items-center">
         <?php
         // sort på nested objects value (Planet->sunDistance)
@@ -117,9 +132,9 @@
         //}
         ?>
     </section>
-    <!-- View Content -->
+    <!-- View1 Content -->
     <section class="element-solsystem" style="">
-        <div id="Sol" class="element"></div>
+        <div id="Sol" class="element" onclick="flyBy()"></div>
         <?php
     
         foreach($ListofShowPlanets->Elements as $Planet){
