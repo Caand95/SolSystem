@@ -194,22 +194,20 @@ body {
 }
 
 /** View 2 **/
-.spinninPlanet-Container{
-    top:0%;
+.Planet-Container{
     max-height: 50%;
-    height: 50%;
+    left:25%;
+    right:25%;
 }
-.spinninPlanet-planet{
-    /*Spinnin effect*/
-    height: inherit;
-    max-height: 50%;
+.Planet-spinningPlanet{
+    
 }
-.spinninPlanet-planet-img{
-    max-height: 80%;
-    height: inherit;
+.Planet-spinninPlanet-img{
+    height: 100%;
+    
 }
+.Planet-Facts{}
 .planetInfo-container{
-    bottom:0%;
     max-height: 50%;
     min-height: 10%;
 }
