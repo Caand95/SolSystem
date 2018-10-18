@@ -177,6 +177,17 @@ body {
     text-shadow: 0 0 3px #666, 0 0 5px #666;
 }
 
+.sveav-ani{
+    animation: float 4s ease-in-out infinite alternate;
+    -webkit-animation: float 4s ease-in-out infinite alternate;
+    -moz-animation: float 4s ease-in-out infinite alternate;
+}
+.sveav-ani-rev{
+    animation: float-down-up 2s ease-in-out infinite alternate;
+    -webkit-animation: float-down-up 2s ease-in-out infinite alternate;
+    -moz-animation: float-down-up 2s ease-in-out infinite alternate;
+}
+
 /**View1**/
 .element-solsystem {
     position: absolute;
@@ -195,9 +206,12 @@ body {
 
 /** View 2 **/
 .Planet-Container{
-    max-height: 50%;
-    left:25%;
-    right:25%;
+    width: 75%;
+    left: 25%;
+    right: 25%;
+    height: 75%;
+    margin: 0 12.5%;
+    display:flex;
 }
 .Planet-spinningPlanet{
     
@@ -206,16 +220,32 @@ body {
     height: 100%;
     
 }
-.Planet-Facts{}
+.Planet-Facts{
+    float:right;
+    width:100%;
+}
+.Planet-facts-Box{
+    height:35%;
+    Border: 1px solid darkslategray;
+    background-color: darkslategrey;
+    border-radius: 5px;
+    width: 100%;
+    margin-top:17%;
+    margin-bottom: 3%;  
+}
 .planetInfo-container{
     max-height: 50%;
     min-height: 10%;
+    bottom: 5%;
 }
 .planetInfo-infoBox{
     Border: 1px solid darkslategray;
-    bottom: 5%;
     background-color: darkslategrey;
     border-radius: 5px;
+    bottom: 5%;
+    position: fixed;
+    height: 35%;
+    width: 80%;
 }
 .planetInfo-header{}
 .planetInfo-info{}
@@ -262,8 +292,22 @@ a:selected button:selected {
     z-index: 10;
     bottom: 5%;
 }
+#rejs-container-rev {
+    position: fixed;
+    left: 40%;
+    display: flex;
+    z-index: 10;
+    bottom: 5%;
+}
 
 #rejs-racket {
+    height: 75px;
+    width: 75px;
+    animation: racketfloat 2s ease-in-out infinite alternate;
+    -webkit-animation: racketfloat 2s ease-in-out infinite alternate;
+    -moz-animation: racketfloat 2s ease-in-out infinite alternate;
+}
+#rejs-racket-back {
     height: 75px;
     width: 75px;
     animation: racketfloat 2s ease-in-out infinite alternate;
@@ -312,7 +356,35 @@ a:selected button:selected {
         transform: translateY(-5px) rotate(90deg);
     }
 }
+@-webkit-keyframes float {
+    from {
+        -webkit-transform: translateY(5px);
+    }
 
+    to {
+        -webkit-transform: translateY(-5px);
+    }
+}
+
+@-moz-keyframes float {
+    from {
+        -moz-transform: translateY(5px);
+    }
+
+    to {
+        -moz-transform: translateY(-5px);
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(5px);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
 @-webkit-keyframes float-down-up {
     from {
         -webkit-transform: translateY(-2px);
