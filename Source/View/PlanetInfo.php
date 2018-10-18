@@ -36,7 +36,7 @@ $jsontmp = json_encode($planetFacts, false);
         $("#Planet-Facts-Box-Text").text(fact);
         console.log(fact);
 
-        // Play voice.
+        // Play voice
         if (responsiveVoice.voiceSupport()) {
             responsiveVoice.cancel();
             responsiveVoice.speak(fact, "Danish Female");
