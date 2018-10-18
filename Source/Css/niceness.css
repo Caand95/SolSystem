@@ -237,6 +237,7 @@ body {
             box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
     padding: 15px;
     position: relative;
+    z-index: 5;
 }
 
 .speech-bubble-ds-arrow {
