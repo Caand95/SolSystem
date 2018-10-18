@@ -46,7 +46,7 @@ create procedure GetPlanetFacts()
 delimiter //
 Create procedure GetPlanetFactByName(In PlanetName varchar(100))
     begin
-        select * from PlanetFacts where name = planetName
+        select * from PlanetFacts where name = PlanetName
     end //
 delimiter ;
 

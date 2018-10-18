@@ -18,15 +18,27 @@ if(isset($_GET['planet'])) {
 }
 
 $planetFacts = $PlanetController->getPlanetFacts($selectedPlanet);
-echo "<script>\n";
-echo "var facts = JSON.parse(\"" . json_encode($planetFacts, JSON_FORCE_OBJECT) . "\");\n";
-echo "/*";
-//$json = json_encode($planetFacts[0]->planetName, false);
-// echo $json;
-// echo json_encode($planetFacts, JSON_FORCE_OBJECT);
-echo "*/\n";
-echo "</script>\n";
+$jsontmp = json_encode($planetFacts, false);
 ?>
+
+<script>
+    var facts = JSON.parse('<?php print_r($jsontmp);?>');
+    var currentFactNumber = 0;
+    function DisplayFact(){
+        var textframe = document.getElementById('Planet-Facts-Box-Text');
+        currentFactNumber++;
+        if(currentFactNumber >= facts.length){
+            currentFactNumber = 0;
+        }
+        textframe.innerText  = facts[currentFactNumber]['fact'];
+    /*    facts.forEach(function(element) {
+  console.log(element['fact']);
+})*/
+        console.log(facts[currentFactNumber]['fact']);
+        
+    }
+</script>
+
     
 <section class="Planet-container">
     <div class="Planet-spinninPlanet">
@@ -34,7 +46,8 @@ echo "</script>\n";
     </div>
     <div class="Planet-Facts">
         <div class="Planet-Facts-Box sveav-ani-rev">
-            <span class="Planet-Facts-Box-Text"></span>
+            <span id="Planet-Facts-Box-Text"></span>
+            <button class="btn btn-secondary Planet-Facts-Box-Btn" onclick="DisplayFact()">Næste Fakta!</button>
             <div class="speech-bubble-ds-arrow"></div>
         </div>
         <img class="Planet-Facts-astro sveav-ani" src="./image/astronaut.png" />
