@@ -2,16 +2,21 @@
 <?php require_once "./Scripts/LoadCelestialElements.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
 <?php //Snask ?>
-<?php 
-    $selectedPlanet="";
-    if(isset($_GET['planet'])) { 
-        if(!empty($_GET['planet'])) { 
-            $selectedPlanet = $_GET['planet'];
-        } 
-    } 
-?>
-<?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
-
+<?php   $selectedPlanet="";
+    
+if(isset($_GET['planet'])) { 
+    if(!empty($_GET['planet'])) { 
+        foreach ($ListofPlanets as $Planet) {
+            if ($_GET['planet'] == $Planet->name) {
+                $selectedPlanet = $_GET['planet'];
+                break;
+            } else {
+                $selectedPlanet = "Jorden";
+            }
+        }
+    }
+} ?>
+    
 <section class="Planet-container">
     <div class="Planet-spinninPlanet">
         <img class="Planet-spinninPlanet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
@@ -28,6 +33,7 @@
     function GoBack() {
         window.location.href = "?page=";
     }
+
 </script>
 <section id="rejs-container-rev">
     <img id="rejs-racket-back" src="./Image/Racket-rev.png" />
