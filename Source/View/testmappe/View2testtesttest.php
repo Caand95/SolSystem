@@ -2,7 +2,14 @@
 <?php require_once "./Scripts/LoadCelestialElements.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
 <?php //Snask ?>
-<?php $selectedPlanet="";if(isset($_GET['planet'])) { if(!empty($_GET['planet'])) { $selectedPlanet = $_GET['planet']; } } ?>
+<?php 
+    $selectedPlanet="";
+    if(isset($_GET['planet'])) { 
+        if(!empty($_GET['planet'])) { 
+            $selectedPlanet = $_GET['planet'];
+        } 
+    } 
+?>
 <?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
 
 <section class="Planet-container">
