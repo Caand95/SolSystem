@@ -86,8 +86,8 @@
         <?php
         require_once "./Controller/CelestialElementController.php";
 
-        $controller = new CelestialElementController();
-        $celestialElements = $controller->getCelestialElements();
+        $ceController = new CelestialElementController();
+        $celestialElements = $ceController->getCelestialElements();
 
         if(!empty($celestialElements)){
             foreach($celestialElements as $celestialElement){
@@ -95,7 +95,7 @@
             }
         }
 
-        $star = $controller->getCelestialElement("Stjerne");
+        $star = $ceController->getCelestialElement("Stjerne");
         printCelestialElement($star);
 
         function printCelestialElement($celestialElement) {

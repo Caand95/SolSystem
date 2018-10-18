@@ -3,6 +3,7 @@
 require_once "./Model/DbRepository.php";
 require_once "./Model/iPlanetRepository.php";
 require_once "./Model/Planet.php";
+require_once "./Model/PlanetFact.php";
 
 class PlanetDbRepository extends DbRepository implements iPlanetRepository
 {
@@ -103,6 +104,44 @@ class PlanetDbRepository extends DbRepository implements iPlanetRepository
 
         $this->close();
         return $planets;
+    }
+
+    public function getPlanetFacts($planetName) : array
+    {
+        $this->open();
+        $planetFacts = array();
+
+        try {
+            if (!($statement = $this->sqlCon->prepare("CALL GetPlanetFactByName(?)"))) {
+                echo "Prepare failed: (" . $this->sqlCon->errno . ") " . $this->sqlCon->error;
+            }
+
+            // Bind string ("s") parameter $planetName to "?" parameter in prepared statement.
+            if (!$statement->bind_param("s", $planetName)) {
+                echo "Binding parameters failed: (" . $statement->errno . ") " . $statement->error;
+            }
+            
+            if (!$statement->execute()) {
+                 echo "Execute failed: (" . $statement->errno . ") " . $statement->error;
+            }
+            
+            if (!($result = $statement->get_result())) {
+                echo "Getting result set failed: (" . $statement->errno . ") " . $statement->error;
+            }
+
+            while ($row = $result->fetch_assoc()) {
+                $planetFact = new PlanetFact($row['ID'], $row['Name'], $row['Fact']);
+                array_push($planetFacts, $planetFact);
+            }
+
+            $result->free();
+        } 
+        catch (Exception $ex) { 
+            die($ex->getMessage()); 
+        }
+
+        $this->close();  
+        return $planetFacts;  
     }
 }
 

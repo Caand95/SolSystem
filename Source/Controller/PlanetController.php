@@ -27,6 +27,12 @@ class PlanetController
         $planets = $this->planetRepository->getPlanets();
         return $planets;
     }
+
+    public function getPlanetFacts($planetName) : array
+    {
+        $planetFacts = $this->planetRepository->getPlanetFacts($planetName);
+        return $planetFacts;
+    }
 }
 
 ?>
