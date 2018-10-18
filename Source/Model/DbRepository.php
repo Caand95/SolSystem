@@ -38,6 +38,8 @@ abstract class DbRepository
                 . $this->sqlCon->connect_errno 
                 . " - " . $this->sqlCon->connect_error;
         }
+
+        $this->sqlCon->set_charset('utf8');
     }
 
     protected function close()

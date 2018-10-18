@@ -248,15 +248,6 @@ body {
     z-index: 5;
 }
 
-.Planet-Facts-Box-Btn {
-    position: absolute;
-    bottom: 5%;
-    /* border-top-left-radius: 0px !important; */
-    /* border-top-right-radius: 0px !important; */
-    right: 2.5%;
-    z-index: 0;
-}
-
 .speech-bubble-ds-arrow {
     border-left: 21px solid transparent;
     border-top: 20px solid rgba(0, 0, 0, 0.2);
@@ -338,7 +329,18 @@ a:selected button:selected {
         inset 0 0 80px yellow;
 }
 
-#Planet-Facts-Box-Text {}
+#Planet-Facts-Box-Text {
+    /*font-size: 16px;*/
+}
+
+#Planet-Facts-Box-Btn {
+    position: absolute;
+    bottom: 5%;
+    /* border-top-left-radius: 0px !important; */
+    /* border-top-right-radius: 0px !important; */
+    right: 2.5%;
+    z-index: 0;
+}
 
 #rejs-container {
     position: fixed;
