@@ -232,8 +232,9 @@ body {
 .Planet-facts-Box {
     height: fit-content;
     max-height: 35%;
-    min-height: 15%;
+    min-height: 25%;
     width: 90%;
+    max-width: 65%;
     margin-top: 17%;
     margin-bottom: 3%;
     margin-left: 5%;
