@@ -1,27 +1,33 @@
 <?php //IMPORT ?>
 <?php require_once "./Scripts/LoadCelestialElements.php"; ?>
 <?php require_once "./Scripts/LoadPlanets.php"; ?>
-<?php //Snask ?>
 <?php 
-    $selectedPlanet="";
-    if(isset($_GET['planet'])) { 
-        if(!empty($_GET['planet'])) { 
-            $selectedPlanet = $_GET['planet'];
-        } 
+$selectedPlanet="";
+    
+if(isset($_GET['planet'])) { 
+    if(!empty($_GET['planet'])) { 
+        foreach ($ListofPlanets as $Planet) {
+            if ($_GET['planet'] == $Planet->name) {
+                $selectedPlanet = $_GET['planet'];
+                break;
+            } else {
+                $selectedPlanet = "Jorden";
+            }
+        }
     }
+}
 
-        /*Script for running the javascript*/
-        $planetFacts = $PlanetController->getPlanetFacts($selectedPlanet);
-        echo "<script>\n";
-        //echo "var facts = JSON.parse(\"" . json_encode($planetFacts, JSON_FORCE_OBJECT) . "\");\n";
-        echo "/*";
-        // var_dump($planetFacts);
-        echo json_encode($planetFacts, JSON_FORCE_OBJECT);
-        echo "*/\n";
-        echo "</script>\n";
+$planetFacts = $PlanetController->getPlanetFacts($selectedPlanet);
+echo "<script>\n";
+echo "var facts = JSON.parse(\"" . json_encode($planetFacts, JSON_FORCE_OBJECT) . "\");\n";
+echo "/*";
+//$json = json_encode($planetFacts[0]->planetName, false);
+// echo $json;
+// echo json_encode($planetFacts, JSON_FORCE_OBJECT);
+echo "*/\n";
+echo "</script>\n";
 ?>
-<?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
-
+    
 <section class="Planet-container">
     <div class="Planet-spinninPlanet">
         <img class="Planet-spinninPlanet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
@@ -38,6 +44,7 @@
     function GoBack() {
         window.location.href = "?page=";
     }
+
 </script>
 <section id="rejs-container-rev">
     <img id="rejs-racket-back" src="./Image/Racket-rev.png" />
