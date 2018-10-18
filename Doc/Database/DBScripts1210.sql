@@ -107,3 +107,39 @@ INSERT INTO Planet VALUES ('Uranus','Uranus er den syvende planet fra Solen i So
 INSERT INTO Planet VALUES ('Neptun','Neptun er den ottende planet i vores solsystem. Den er den fjerdestørste målt efter diameter og den tredjestørste efter masse. Neptuns masse er 17 gange så stor som jordens og en lille smule større end dens nærmest beslægtede i solsystemet, Uranus, der er 14 jordmasser. Neptun er dog en lille smule mindre end Uranus pga. en højere densitet. Planeten er opkaldt efter Jupiters storebroder; havguden Neptunus (Poseidon). Neptuns astronomiske symbol (♆, Unicode U+2646) er en stiliseret udgave af Poseidons trefork.',NULL,'#6799ea',49528,4495.1,59.8,102,-200,14,1,'Ice');
 
 INSERT INTO Planet VALUES ('Pluto','Pluto er en dværgplanet beliggende i Kuiperbæltet i udkanten af vores solsystem. Den er opkaldt efter Pluton, den romerske gud for dødsriget, svarende til Hades i den græske mytologi.',NULL,'#8793a5',2370,5906.4,90.56,0.0146,-225,5,0,'Terrestrial');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Merkur', 'Merkur er planeten i vores solsystem der er tættest på solen.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Merkur', 'Merkur er lige så bred som det atlantiske hav.');
+INSERT INTO planetfacts(`Name`, `Fact`) VALUES ('Merkur', 'Merkur er den hurtigste planet, som suser igennem rummet med 50 kilometer i timen.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Venus', 'Venus er den varmeste planet i vores solsystem med en temperatur på 460 grader celcius.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Venus', 'Venus har tusindvis af vulkaner og kratere, med super høje bjerge.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Venus', 'Venus har fået navnet fra den romerske gudinde af skønhed.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Jorden er den 5-største planet i vores solsystem.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Alle planeter er navngivet efter romerske og græske guder, men Jorden er undtagelsen.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Jorden er det eneste sted mennesker har fundet liv indtil videre.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'Mars\' højeste punkt er kaldet Olympus Mons, som er 3 gange højere end Mount Everest.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'I modsætning til Jorden har Mars 2 måner som er kaldet Phobos og Deimos.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'Der er 2 robotbiler som kører rundt på mars, som søger efter liv.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Jupiter er den største planet i hele solsystemet.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Det røde område på Jupiter, kendt som "Det store røde punkt" er en kollosal storm som har varet i 350 år.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Jupiter har over 50 måner.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Saturn', 'Saturn er planeten i vores solsystem som er kendt for dens store ringe af is og sten der snurre rundt om planeten.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Saturn', 'Saturns måne kaldet Titan, er den næst-største måne i vores solsystem.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Saturn', 'Saturn har storme som blæser med en kraft på 800 kilometer i timen.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Uranus', 'Det tager Uranus 84 år at rotere rundt om solen, hvor jorden kun tager 1 år.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Uranus', 'Uranus rotere rundt om solen på dets side, så somre og vintre tager 21 år på dens nord og sydpol.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Uranus', 'Uranus ser blå ud, pga. dens gasser, der får den til at se blå ud.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Neptun', 'Neptun er planeten som er længest væk fra solen og tager 165 år at komme rundt om solen.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Neptun', 'Neptun er næsten 4 gange større end Jorden.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Neptun', 'På grund af Neptuns ekstremt hårde storme, har kun et rumskib turde flyve forbi den.');
+
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Pluto', 'Pluto er lidt en snyder, da den ikke en rigtig planet, men det som kaldes en dværg planet.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Pluto', 'Pluto var en gang en planet før 2006, hvor videnskabsmænd klassificerede den som en dværg planet.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Pluto', 'Pluto er den største dværgplanet.');

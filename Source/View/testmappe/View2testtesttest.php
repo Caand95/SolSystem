@@ -5,15 +5,16 @@
 <?php $selectedPlanet="";if(isset($_GET['planet'])) { if(!empty($_GET['planet'])) { $selectedPlanet = $_GET['planet']; } } ?>
 <?php /*Virker ikke*/ if(in_array($selectedPlanet,$ListofPlanets)){$selectedPlanet ="Earth";} ?>
 
-<section class="spinninPlanet-Container d-flex justify-content-center align-items-center">
-    <div id="spinninPlanet-planet">
-         <img id="spinninPlanet-planet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
+<section class="Planet-container">
+<div class="Planet-spinninPlanet">
+    <img class="spinninPlanet-img" src="./image/<?php echo $selectedPlanet; ?>.png" />
     </div>
+    <div class="Planet-Facts"></div>
 </section>
 
-<section id="planetInfo-container">
-    <div id="planetInfo-infoBox">
-        <h1 id="planetInfo-header"></h1>
-        <p id="planetInfo-info"></p>
+<section class="planetInfo-container">
+    <div class="planetInfo-infoBox">
+        <h1 class="planetInfo-header"></h1>
+        <p class="planetInfo-info"></p>
     </div>
 </section>
