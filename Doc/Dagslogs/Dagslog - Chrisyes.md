@@ -80,4 +80,11 @@ Derefter går vi efter at opfylde kravene før vi går i gang igen med design.
 
 Dag 7
 
+I går blev vi mere eller mindre færdige med view 1.
+
+Dan fik den fede idé, at lave en raket, som respondede på tryk af nav-baren, og kørte ind i bunden af skærmen, med et flag bagpå med planetens navn.
+
+Så i dag skal vi kigge på navigationen til view 2 hvor den valgte planet skal zoomes ind på med info omkring den.
+Da det er sidste dag vi kan arbejde med projektet, må vi også have kigget på kravene for opgaven og forsøge at komme tæt på målet.
+
 #############################################################################
