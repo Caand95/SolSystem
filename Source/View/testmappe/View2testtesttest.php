@@ -19,6 +19,7 @@
     <div class="Planet-Facts">
         <div class="Planet-Facts-Box sveav-ani-rev">
             <span class="Planet-Facts-Box-Text"></span>
+            <div class="speech-bubble-ds-arrow"></div>
         </div>
         <img class="Planet-Facts-astro sveav-ani" src="./image/astronaut.png" />
     </div>
