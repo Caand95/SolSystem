@@ -120,12 +120,12 @@ INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Jorden er den 5-stø
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Alle planeter er navngivet efter romerske og græske guder, men Jorden er undtagelsen.');
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jorden', 'Jorden er det eneste sted mennesker har fundet liv indtil videre.');
 
-INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'Mars\' højeste punkt er kaldet Olympus Mons, som er 3 gange højere end Mount Everest.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'Mars højeste punkt er kaldet Olympus Mons, som er 3 gange højere end Mount Everest.');
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'I modsætning til Jorden har Mars 2 måner som er kaldet Phobos og Deimos.');
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Mars', 'Der er 2 robotbiler som kører rundt på mars, som søger efter liv.');
 
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Jupiter er den største planet i hele solsystemet.');
-INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Det røde område på Jupiter, kendt som "Det store røde punkt" er en kollosal storm som har varet i 350 år.');
+INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Det røde område på Jupiter, kendt som Det Store Røde Punkt er en kollosal storm som har varet i 350 år.');
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Jupiter', 'Jupiter har over 50 måner.');
 
 INSERT INTO planetfacts (`Name`, `Fact`) VALUES ('Saturn', 'Saturn er planeten i vores solsystem som er kendt for dens store ringe af is og sten der snurre rundt om planeten.');
